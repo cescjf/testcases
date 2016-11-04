@@ -1,0 +1,127 @@
+under Problem {
+  Type = Steady;
+  Mode = Dimensional;
+}
+
+under Input {
+  Prefix = "";
+  GeometryPrefix="";
+  InitialWallDisplacement="PATH TO SOWERED VMO (from SDESIGN)";
+}
+
+under Output {
+  under Postpro {
+    Prefix = "";
+    LiftandDrag = "res/ascii/naca.liftdrag";
+    Pressure = "res/bin/naca.pres";
+    Displacement = "something.displacement";
+    Frequency = 0;
+  }
+  under Restart {
+    Prefix = "";
+    Solution = "res/bin/naca.sol";
+    RestartData = "res/ascii/naca.rst";
+    Frequency = 0;
+  }
+}
+
+under SensitivityAnalysis {
+  SensitivityComputation = Analytical;
+  MatrixVectorProduct = Exact;
+  SensitivityMesh = On;
+  under LinearSolver {
+    Type = Gmres;
+    MaxIts = 2000;
+    KrylovVectors = 2000;
+    Eps = 1.0e-10;
+    Output = "stdout";
+    under Preconditioner { Type = Ras; Fill = 0; }
+  }
+}
+
+under MeshMotion {
+  Type = Basic;
+  Element = BallVertexSprings;
+  Mode = NonRecursive;
+  NumIncrements = 1;
+  under Newton {
+    MaxIts = 1;
+    Eps = 0.01;
+    under LinearSolver {
+      Type = Cg;
+      MaxIts = 5000;
+      KrylovVectors = 100;
+      Eps = 1e-12;
+      under Preconditioner { Type = Jacobi; }
+    }
+  }
+}
+
+under Surfaces {
+  under SurfaceData[2] {
+    Nx = 0.0;
+    Ny = 0.0;
+    Nz = 1.0;
+  }
+}
+
+under Equations {
+  Type = Euler;
+}
+
+under BoundaryConditions {
+  under Inlet {
+    Mach = 0.5;
+    Alpha = 0.0;
+    Beta = 0.0;
+    Pressure = 30397.5; // Pascals (30,000 ft)
+    Density = 0.45; // kg/m^3
+  }
+}
+
+under Space  {
+  under NavierStokes { 
+    Flux = Roe;
+    Reconstruction = Constant;
+    AdvectiveOperator = FiniteVolume;
+    Limiter = VanAlbada;
+    Gradient = LeastSquares;
+    Dissipation = SecondOrder;
+    Beta = 0.3333333333333333;
+    Gamma = 1.0;
+  }
+}
+
+under Time  {
+  Type = Implicit;
+  MaxIts = 1000;
+  Eps = 1.e-16;
+  EpsAbs = 1.e-6;
+  Cfl0 = 1.0;
+  Cfl1 = 1.0;
+  Cfl2 = 5.0;
+  CflMax = 1.0e4;
+  Ser = 0.7;
+  CheckSolution=Off;
+  CheckVelocity=Off;
+  CheckPressure=Off;
+  CheckDensity=Off;
+  under Implicit {
+    MatrixVectorProduct = FiniteDifference;
+    under Newton {
+      MaxIts = 1;
+      Eps = 1e-5;
+      under LinearSolver { 
+        under NavierStokes { 
+          Type = Gmres;
+          EpsFormula = Eisenstadt;
+          MaxIts = 80;
+          KrylovVectors = 80;
+          Eps = 1e-3;
+          //Output = "stdout";
+          under Preconditioner { Type = Ras; Fill = 0; }
+        }
+      }
+    }
+  }
+}
