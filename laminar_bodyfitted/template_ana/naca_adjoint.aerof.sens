@@ -14,14 +14,14 @@ under Input {
   ShapeDerivative = "./sdesign/naca_sowered.der";
   InitialWallDisplacement="./sdesign/naca_sowered.vmo";
   //Solution = "./results/naca_steady.sol";
-  OptimalPressure = "./results/naca_sens.pres";
+  //OptimalPressure = "./results/naca_adjoint_sens.pres";
 }
 
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDragSensitivity = "./results/naca_sens.liftdrag";
-    PressureSensitivity = "./results/naca_sens.pres";
+    LiftandDragSensitivity = "./results/naca_adjoint_sens.liftdrag";
+    PressureSensitivity = "./results/naca_adjoint_sens.pres";
     Frequency = 0;
   }
   under Restart {
@@ -31,7 +31,7 @@ under Output {
 }
 
 under SensitivityAnalysis {
-  Method = Direct;
+  Method = Adjoint;
   SensitivityComputation = Analytical;
   //MatrixVectorProduct = Exact;
   SensitivityMesh = On;
@@ -72,7 +72,16 @@ under Surfaces {
 }
 
 under Equations {
-  Type = Euler;
+  Type = NavierStokes;
+  under TurbulenceClosure {
+    Type = TurbulenceModel;
+    under TurbulenceModel {
+      Type = SpalartAllmaras;
+      under SpalartAllmaras {
+        Form = Original;
+      }
+  }
+  }
 }
 
 under BoundaryConditions {

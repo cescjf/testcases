@@ -1,6 +1,6 @@
 under Problem {
-  //Type = SteadySensitivityAnalysis;
-  Type = Steady;
+  Type = SteadySensitivityAnalysis;
+  //Type = Steady;
   Mode = Dimensional;
 }
 
@@ -11,15 +11,17 @@ under Input {
   CpuMap = "../mesh/mesh_ref.12cpu";
   Prefix = "";
   GeometryPrefix="";
-  InitialWallDisplacement="./sdesign/naca_plus_sowered.vmo";
+  ShapeDerivative = "./sdesign/naca_sowered.der";
+  InitialWallDisplacement="./sdesign/naca_sowered.vmo";
+  //Solution = "./results/naca_steady.sol";
+  //OptimalPressure = "./results/naca_direct_sens.pres";
 }
 
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDrag = "./results/naca_plus_steady.liftdrag";
-    Pressure = "./results/naca_plus_steady.pres";
-    Displacement = "./results/naca_plus_steady.disp";
+    LiftandDragSensitivity = "./results/naca_direct_sens.liftdrag";
+    PressureSensitivity = "./results/naca_direct_sens.pres";
     Frequency = 0;
   }
   under Restart {
@@ -29,6 +31,7 @@ under Output {
 }
 
 under SensitivityAnalysis {
+  Method = Direct;
   SensitivityComputation = Analytical;
   //MatrixVectorProduct = Exact;
   SensitivityMesh = On;
@@ -69,7 +72,16 @@ under Surfaces {
 }
 
 under Equations {
-  Type = Euler;
+  Type = NavierStokes;
+  under TurbulenceClosure {
+    Type = TurbulenceModel;
+    under TurbulenceModel {
+      Type = SpalartAllmaras;
+      under SpalartAllmaras {
+        Form = Original;
+      }
+  }
+  }
 }
 
 under BoundaryConditions {
@@ -83,7 +95,7 @@ under BoundaryConditions {
 }
 
 under Space  {
-  under NavierStokes { 
+  under NavierStokes {
     Flux = Roe;
     Reconstruction = Constant;
     AdvectiveOperator = FiniteVolume;
@@ -112,10 +124,10 @@ under Time  {
   under Implicit {
     MatrixVectorProduct = FiniteDifference;
     under Newton {
-      MaxIts = 1000;
+      MaxIts = 1;
       Eps = 1e-5;
-      under LinearSolver { 
-        under NavierStokes { 
+      under LinearSolver {
+        under NavierStokes {
           Type = Gmres;
           EpsFormula = Eisenstadt;
           MaxIts = 500;

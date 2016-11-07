@@ -13,4 +13,4 @@ find . -type d -name 'sim_*' | while read line; do
 done
 
 cd anasim
-qsub run_sens.sh
+qsub ./run_sens.sh

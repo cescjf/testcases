@@ -1,6 +1,6 @@
 under Problem {
-  Type = SteadySensitivityAnalysis;
-  //Type = Steady;
+  //Type = SteadySensitivityAnalysis;
+  Type = Steady;
   Mode = Dimensional;
 }
 
@@ -11,17 +11,15 @@ under Input {
   CpuMap = "../mesh/mesh_ref.12cpu";
   Prefix = "";
   GeometryPrefix="";
-  ShapeDerivative = "./sdesign/naca_sowered.der";
-  InitialWallDisplacement="./sdesign/naca_sowered.vmo";
-  //Solution = "./results/naca_steady.sol";
-  OptimalPressure = "./results/naca_steady.pres";  
+  InitialWallDisplacement="./sdesign/naca_minus_sowered.vmo";
 }
 
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDragSensitivity = "./results/naca_sens.liftdrag";
-    PressureSensitivity = "./results/naca_sens.pres";
+    LiftandDrag = "./results/naca_minus_steady.liftdrag";
+    Pressure = "./results/naca_minus_steady.pres";
+    Displacement = "./results/naca_minus_steady.disp";
     Frequency = 0;
   }
   under Restart {
@@ -71,7 +69,16 @@ under Surfaces {
 }
 
 under Equations {
-  Type = Euler;
+  Type = NavierStokes;
+  under TurbulenceClosure {
+    Type = TurbulenceModel;
+    under TurbulenceModel {
+      Type = SpalartAllmaras;
+      under SpalartAllmaras {
+        Form = Original;
+      }
+  }
+  }
 }
 
 under BoundaryConditions {
@@ -100,7 +107,7 @@ under Space  {
 under Time  {
   Type = Implicit;
   MaxIts = 1000;
-  Eps = 1.e-10;
+  Eps = 1.e-8;
   //EpsAbs = 1.e-6;
   Cfl0 = 1.0;
   Cfl1 = 1.0;
@@ -114,7 +121,7 @@ under Time  {
   under Implicit {
     MatrixVectorProduct = FiniteDifference;
     under Newton {
-      MaxIts = 1;
+      MaxIts = 1000;
       Eps = 1e-5;
       under LinearSolver { 
         under NavierStokes { 

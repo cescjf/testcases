@@ -2,6 +2,7 @@
 
 import os as os
 
+
 resultfile = open('manual_sensitivities.csv','w')
 resultfile.write('stencilsize,dLx,dLy\n')
 
@@ -33,16 +34,17 @@ for fname in sorted(os.listdir('.')): #sorted is needed since the reults might b
 resultfile.close()
 
 
-resultfile = open('analytic_sensitivities.csv','w')
-resultfile.write('ABSVAR,dLx,dLy\n')
+for method in ['direct','adjoint']:
+    resultfile = open('analytic_sensitivities_'+method+'.csv','w')
+    resultfile.write('ABSVAR,dLx,dLy\n')
 
-with file('./anasim/results/naca_sens.liftdrag') as f:
-    f.readline()#throw away first line
-    for line in f:
-        split1=line.split()
-        var=split1[0]
-        dLx=split1[5]
-        dLy=split1[6]
-        writeline=",".join([var,dLx,dLy])
-        resultfile.write(writeline)
-        resultfile.write("\n")
+    with file('./anasim/results/naca_'+method+'_sens.liftdrag') as f:
+        f.readline()#throw away first line
+        for line in f:
+            split1=line.split()
+            var=split1[0]
+            dLx=split1[5]
+            dLy=split1[6]
+            writeline=",".join([var,dLx,dLy])
+            resultfile.write(writeline)
+            resultfile.write("\n")

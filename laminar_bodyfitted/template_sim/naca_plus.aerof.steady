@@ -11,15 +11,15 @@ under Input {
   CpuMap = "../mesh/mesh_ref.12cpu";
   Prefix = "";
   GeometryPrefix="";
-  InitialWallDisplacement="./sdesign/naca_minus_sowered.vmo";
+  InitialWallDisplacement="./sdesign/naca_plus_sowered.vmo";
 }
 
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDrag = "./results/naca_minus_steady.liftdrag";
-    Pressure = "./results/naca_minus_steady.pres";
-    Displacement = "./results/naca_minus_steady.disp";
+    LiftandDrag = "./results/naca_plus_steady.liftdrag";
+    Pressure = "./results/naca_plus_steady.pres";
+    Displacement = "./results/naca_plus_steady.disp";
     Frequency = 0;
   }
   under Restart {
@@ -69,7 +69,16 @@ under Surfaces {
 }
 
 under Equations {
-  Type = Euler;
+  Type = NavierStokes;
+  under TurbulenceClosure {
+    Type = TurbulenceModel;
+    under TurbulenceModel {
+      Type = SpalartAllmaras;
+      under SpalartAllmaras {
+        Form = Original;
+      }
+  }
+  }
 }
 
 under BoundaryConditions {

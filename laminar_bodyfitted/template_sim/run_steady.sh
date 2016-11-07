@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#PBS -N SteadySimulation
+#PBS -N sim<index>_laminar_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
 
-CURRENT_DIR='/home/lscheuch/jcangles/Simulations/matthew/sim_<index>'
-echo $CURDIR
-echo aasaaaaaaaaaaaaaaaaaaaaaaaaa
+CURRENT_DIR='<casepath>/sim_<index>'
 
 function printSuccess() {
    RED='\033[1;31m'
@@ -17,7 +15,7 @@ function printSuccess() {
 
 module load openmpi/openmpi161_intel13
 
-AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.debug
+AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.opt
 SOWER_EXEC=/home/mzahr/frg_codes/sower/bin/sower.Linux
 XP2EXO_EXEC=/home/pavery/bin/xp2exo
 SDESIGN_EXEC=/home/lscheuch/codes/sdesign.d/Executables.d/sdesign.Linux.opt

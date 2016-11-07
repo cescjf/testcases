@@ -1,13 +1,18 @@
 #!/bin/bash
 
+#PBS -N anasim_laminar_bodyfitted
+#PBS -M lscheuch@stanford.edu
+#PBS -l nodes=1:ppn=12
+#PBS -l walltime=48:00:00
+
 function printSuccess() {
    RED='\033[1;31m'
    NC='\033[0m'
    printf "${RED}$1${NC}\n\n"
 }
 
-CURRENT_DIR=/home/lscheuch/jcangles/Simulations/matthew/sim_1
-AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.debug
+CURRENT_DIR='<casepath>/anasim'
+AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.opt
 SOWER_EXEC=/home/mzahr/frg_codes/sower/bin/sower.Linux
 XP2EXO_EXEC=/home/pavery/bin/xp2exo
 SDESIGN_EXEC=/home/lscheuch/codes/sdesign.d/Executables.d/sdesign.Linux.opt
@@ -26,7 +31,10 @@ $SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref
 printSuccess "SOWER on fluid finished"
 cd ..
 
-mpirun -n 12 $AEROF_EXEC naca.aerof.sens
+module load openmpi/openmpi161_intel13
+
+mpirun -n 12 $AEROF_EXEC naca_direct.aerof.sens
+mpirun -n 12 $AEROF_EXEC naca_adjoint.aerof.sens
 printSuccess "AERO-F finished"
 
 #mpirun -n 12 $AEROF_EXE naca.aerof.sens
