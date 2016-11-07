@@ -1,0 +1,318 @@
+
+
+[1;31mSDESIGN_ended[0m
+
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 8
+ ... Number of output result(s) = 8
+ ... Processing result 1 with tag 0     ... Processing result 2 with tag 1     ... Processing result 3 with tag 2     ... Processing result 4 with tag 3     ... Processing result 5 with tag 4     ... Processing result 6 with tag 5     ... Processing result 7 with tag 6     ... Processing result 8 with tag 7    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 1
+ ... Number of output result(s) = 1
+ ... Processing result 1 with tag 0    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 8
+ ... Number of output result(s) = 8
+ ... Processing result 1 with tag 0     ... Processing result 2 with tag 1     ... Processing result 3 with tag 2     ... Processing result 4 with tag 3     ... Processing result 5 with tag 4     ... Processing result 6 with tag 5     ... Processing result 7 with tag 6     ... Processing result 8 with tag 7    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 1
+ ... Number of output result(s) = 1
+ ... Processing result 1 with tag 0    
+[1;31mPREPROCESSED_MESH[0m
+
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_plus_sowered.vmo'
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=5): 20.05 MB
+Memory for Gmres(80) solver: 62.19 MB
+Spatial residual norm = 6.353806913951e+05
+Time for one residual evaluation: 0.002741 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 9.107284e-01, Cfl = 1.000000e+00, Elapsed Time = 8.01e-02 s
+It     2: Res = 4.247011e-01, Cfl = 5.000000e+00, Elapsed Time = 3.35e-01 s
+It     3: Res = 1.110268e-01, Cfl = 1.000000e+01, Elapsed Time = 5.40e-01 s
+It     4: Res = 5.322062e-02, Cfl = 1.500000e+01, Elapsed Time = 7.29e-01 s
+It     5: Res = 2.792908e-02, Cfl = 2.000000e+01, Elapsed Time = 9.58e-01 s
+It     6: Res = 2.020265e-02, Cfl = 2.500000e+01, Elapsed Time = 1.22e+00 s
+It     7: Res = 1.766027e-02, Cfl = 3.000000e+01, Elapsed Time = 1.53e+00 s
+It     8: Res = 1.445988e-02, Cfl = 3.500000e+01, Elapsed Time = 1.74e+00 s
+It     9: Res = 1.068024e-02, Cfl = 4.000000e+01, Elapsed Time = 1.97e+00 s
+It    10: Res = 7.229373e-03, Cfl = 4.500000e+01, Elapsed Time = 2.20e+00 s
+It    11: Res = 4.611364e-03, Cfl = 5.000000e+01, Elapsed Time = 2.45e+00 s
+It    12: Res = 2.877659e-03, Cfl = 5.500000e+01, Elapsed Time = 2.85e+00 s
+It    13: Res = 1.825283e-03, Cfl = 6.007206e+01, Elapsed Time = 3.13e+00 s
+It    14: Res = 1.110865e-03, Cfl = 8.261690e+01, Elapsed Time = 3.45e+00 s
+It    15: Res = 6.471732e-04, Cfl = 1.169599e+02, Elapsed Time = 3.85e+00 s
+It    16: Res = 3.579891e-04, Cfl = 1.707205e+02, Elapsed Time = 4.34e+00 s
+It    17: Res = 1.590614e-04, Cfl = 2.583992e+02, Elapsed Time = 5.03e+00 s
+It    18: Res = 4.620763e-05, Cfl = 4.559367e+02, Elapsed Time = 5.85e+00 s
+It    19: Res = 2.157116e-05, Cfl = 1.083179e+03, Elapsed Time = 7.05e+00 s
+It    20: Res = 4.866523e-06, Cfl = 1.846242e+03, Elapsed Time = 8.68e+00 s
+It    21: Res = 4.328326e-07, Cfl = 5.235364e+03, Elapsed Time = 1.10e+01 s
+It    22: Res = 2.961342e-08, Cfl = 1.000000e+04, Elapsed Time = 1.40e+01 s
+It    23: Res = 5.831233e-09, Cfl = 1.000000e+04, Elapsed Time = 1.76e+01 s
+Wrote solution 0 to './results/naca_plus_steady.pres'
+Wrote solution 0 to './results/naca_plus_steady.disp'
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       1.11       1.12       1.12         1
+
+Fluid Solution                :      17.49      17.49      17.49         -
+  Time Steps                  :       0.04       0.04       0.04        23
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :       8.39       8.49       8.43      2753
+  FE Fluxes                   :       0.00       0.00       0.00         0
+  FV Jacobian                 :       0.54       0.62       0.56        53
+  FE Jacobian                 :       0.00       0.00       0.00         0
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.00       0.00       0.00         0
+  Preconditioner Setup        :       0.92       1.01       0.98        53
+  Linear Solver               :      16.17      16.24      16.19        53
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.02       0.02         2
+  Preconditioner Setup        :       0.00       0.00       0.00         1
+  Linear Solver               :       0.26       0.26       0.26         1
+
+Communication/Synchronization :       1.78       3.29       2.44         -
+  Local                       :       0.16       0.77       0.48         -
+  Global                      :       1.46       2.82       1.95         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.58       0.91       0.73         -
+  Binary Read                 :       0.00       0.01       0.00         1
+  Binary Write                :       0.58       0.91       0.72         4
+
+Total Simulation              :      19.37      19.44      19.40         -
+----------------------------------------------------------------------
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_minus_sowered.vmo'
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=5): 20.05 MB
+Memory for Gmres(80) solver: 62.19 MB
+Spatial residual norm = 6.353807008965e+05
+Time for one residual evaluation: 0.079838 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 9.107284e-01, Cfl = 1.000000e+00, Elapsed Time = 1.32e-01 s
+It     2: Res = 4.247011e-01, Cfl = 5.000000e+00, Elapsed Time = 4.01e-01 s
+It     3: Res = 1.110268e-01, Cfl = 1.000000e+01, Elapsed Time = 5.54e-01 s
+It     4: Res = 5.322062e-02, Cfl = 1.500000e+01, Elapsed Time = 7.46e-01 s
+It     5: Res = 2.792908e-02, Cfl = 2.000000e+01, Elapsed Time = 9.77e-01 s
+It     6: Res = 2.020265e-02, Cfl = 2.500000e+01, Elapsed Time = 1.24e+00 s
+It     7: Res = 1.766027e-02, Cfl = 3.000000e+01, Elapsed Time = 1.55e+00 s
+It     8: Res = 1.445988e-02, Cfl = 3.500000e+01, Elapsed Time = 1.77e+00 s
+It     9: Res = 1.068024e-02, Cfl = 4.000000e+01, Elapsed Time = 2.00e+00 s
+It    10: Res = 7.229373e-03, Cfl = 4.500000e+01, Elapsed Time = 2.24e+00 s
+It    11: Res = 4.611364e-03, Cfl = 5.000000e+01, Elapsed Time = 2.60e+00 s
+It    12: Res = 2.877659e-03, Cfl = 5.500000e+01, Elapsed Time = 2.89e+00 s
+It    13: Res = 1.825283e-03, Cfl = 6.007206e+01, Elapsed Time = 3.17e+00 s
+It    14: Res = 1.110865e-03, Cfl = 8.261690e+01, Elapsed Time = 3.50e+00 s
+It    15: Res = 6.471731e-04, Cfl = 1.169599e+02, Elapsed Time = 3.91e+00 s
+It    16: Res = 3.579890e-04, Cfl = 1.707205e+02, Elapsed Time = 4.41e+00 s
+It    17: Res = 1.590614e-04, Cfl = 2.583992e+02, Elapsed Time = 5.14e+00 s
+It    18: Res = 4.620762e-05, Cfl = 4.559367e+02, Elapsed Time = 5.94e+00 s
+It    19: Res = 2.157115e-05, Cfl = 1.083180e+03, Elapsed Time = 7.28e+00 s
+It    20: Res = 4.866522e-06, Cfl = 1.846242e+03, Elapsed Time = 8.79e+00 s
+It    21: Res = 4.328324e-07, Cfl = 5.235365e+03, Elapsed Time = 1.11e+01 s
+It    22: Res = 2.961340e-08, Cfl = 1.000000e+04, Elapsed Time = 1.43e+01 s
+It    23: Res = 5.831228e-09, Cfl = 1.000000e+04, Elapsed Time = 1.79e+01 s
+Wrote solution 0 to './results/naca_minus_steady.pres'
+Wrote solution 0 to './results/naca_minus_steady.disp'
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       1.35       1.37       1.36         1
+
+Fluid Solution                :      17.78      17.79      17.78         -
+  Time Steps                  :       0.04       0.05       0.04        23
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :       8.55       8.64       8.59      2760
+  FE Fluxes                   :       0.00       0.00       0.00         0
+  FV Jacobian                 :       0.54       0.58       0.56        53
+  FE Jacobian                 :       0.00       0.00       0.00         0
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.00       0.00       0.00         0
+  Preconditioner Setup        :       0.91       0.97       0.95        53
+  Linear Solver               :      16.51      16.57      16.53        53
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.02       0.02         2
+  Preconditioner Setup        :       0.00       0.00       0.00         1
+  Linear Solver               :       0.43       0.44       0.44         1
+
+Communication/Synchronization :       2.22       3.74       2.88         -
+  Local                       :       0.30       1.04       0.58         -
+  Global                      :       1.78       3.21       2.30         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.60       1.07       0.87         -
+  Binary Read                 :       0.00       0.03       0.01         1
+  Binary Write                :       0.58       1.07       0.86         4
+
+Total Simulation              :      19.97      20.15      20.09         -
+----------------------------------------------------------------------
+[1;31mAEROF_ENDED[0m
+
