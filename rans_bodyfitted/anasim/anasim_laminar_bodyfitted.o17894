@@ -1,0 +1,663 @@
+
+[1;31mSDESIGN finished[0m
+
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 8
+ ... Number of output result(s) = 8
+ ... Processing result 1 with tag 0     ... Processing result 2 with tag 1     ... Processing result 3 with tag 2     ... Processing result 4 with tag 3     ... Processing result 5 with tag 4     ... Processing result 6 with tag 5     ... Processing result 7 with tag 6     ... Processing result 8 with tag 7    
+[1;31mSOWER finished[0m
+
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 1
+ ... Number of output result(s) = 1
+ ... Processing result 1 with tag 0    
+[1;31mSOWER on fluid finished[0m
+
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_sowered.vmo'
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=6): 28.87 MB
+Memory for Gmres(80) solver: 74.63 MB
+Memory required for matvec with H2: 162.14+17.40=179.54 MB
+Memory required for matvec with H1 (dim=6): 57.73 MB
+Memory for ILU(0) preconditioner (dim=6): 28.87 MB
+Memory for Gmres(2000) solver: 1843.69 MB
+Memory required for matvec with dRdX: 1057.64 MB
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+******************************************
+*** Fluid Shape Optimization Interface ***
+******************************************
+Spatial residual norm = 6.325441625810e+05
+Time for one residual evaluation: 0.004462 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 4.399483e-01, Cfl = 1.000000e+00, Elapsed Time = 9.27e-02 s
+It     2: Res = 2.773950e-01, Cfl = 5.000000e+00, Elapsed Time = 1.96e-01 s
+It     3: Res = 1.220000e-01, Cfl = 1.000000e+01, Elapsed Time = 3.16e-01 s
+It     4: Res = 4.366435e-02, Cfl = 1.500000e+01, Elapsed Time = 4.65e-01 s
+It     5: Res = 1.846773e-02, Cfl = 2.000000e+01, Elapsed Time = 7.07e-01 s
+It     6: Res = 1.762820e-02, Cfl = 2.500000e+01, Elapsed Time = 8.57e-01 s
+It     7: Res = 1.755626e-02, Cfl = 3.000000e+01, Elapsed Time = 1.01e+00 s
+It     8: Res = 1.504272e-02, Cfl = 3.500000e+01, Elapsed Time = 1.16e+00 s
+It     9: Res = 1.140668e-02, Cfl = 4.000000e+01, Elapsed Time = 1.32e+00 s
+It    10: Res = 7.847639e-03, Cfl = 4.500000e+01, Elapsed Time = 1.49e+00 s
+It    11: Res = 5.029497e-03, Cfl = 5.000000e+01, Elapsed Time = 1.65e+00 s
+It    12: Res = 3.126893e-03, Cfl = 5.500000e+01, Elapsed Time = 1.82e+00 s
+It    13: Res = 1.978945e-03, Cfl = 6.000000e+01, Elapsed Time = 2.00e+00 s
+It    14: Res = 1.244212e-03, Cfl = 7.807220e+01, Elapsed Time = 2.21e+00 s
+It    15: Res = 7.698874e-04, Cfl = 1.080374e+02, Elapsed Time = 2.43e+00 s
+It    16: Res = 4.622331e-04, Cfl = 1.511823e+02, Elapsed Time = 2.69e+00 s
+It    17: Res = 2.445533e-04, Cfl = 2.160714e+02, Elapsed Time = 3.11e+00 s
+It    18: Res = 8.628602e-05, Cfl = 3.373949e+02, Elapsed Time = 3.48e+00 s
+It    19: Res = 2.802150e-05, Cfl = 6.995869e+02, Elapsed Time = 3.99e+00 s
+It    20: Res = 1.105814e-05, Cfl = 1.537291e+03, Elapsed Time = 4.61e+00 s
+It    21: Res = 3.348138e-06, Cfl = 2.947287e+03, Elapsed Time = 5.48e+00 s
+It    22: Res = 1.028352e-06, Cfl = 6.802016e+03, Elapsed Time = 6.78e+00 s
+It    23: Res = 3.534856e-07, Cfl = 1.000000e+04, Elapsed Time = 8.27e+00 s
+It    24: Res = 1.698143e-07, Cfl = 1.000000e+04, Elapsed Time = 9.73e+00 s
+It    25: Res = 9.703149e-08, Cfl = 1.000000e+04, Elapsed Time = 1.13e+01 s
+It    26: Res = 5.900767e-08, Cfl = 1.000000e+04, Elapsed Time = 1.30e+01 s
+It    27: Res = 3.685932e-08, Cfl = 1.000000e+04, Elapsed Time = 1.46e+01 s
+It    28: Res = 2.340567e-08, Cfl = 1.000000e+04, Elapsed Time = 1.61e+01 s
+It    29: Res = 1.502816e-08, Cfl = 1.000000e+04, Elapsed Time = 1.77e+01 s
+It    30: Res = 9.722659e-09, Cfl = 1.000000e+04, Elapsed Time = 1.94e+01 s
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       2.09       2.10       2.09         1
+
+Fluid Solution                :      19.19      19.20      19.20         -
+  Time Steps                  :       0.09       0.11       0.10        31
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :       6.14       6.44       6.30      1895
+  FE Fluxes                   :       3.39       3.68       3.54      1895
+  FV Jacobian                 :       0.53       0.59       0.55        32
+  FE Jacobian                 :       0.79       0.85       0.82        32
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.01       0.02       0.01         1
+  Preconditioner Setup        :       1.65       1.77       1.72        30
+  Linear Solver               :      16.99      17.10      17.03        30
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.01       0.01         1
+  Preconditioner Setup        :       0.00       0.00       0.00         0
+  Linear Solver               :       0.00       0.00       0.00         0
+
+Communication/Synchronization :       1.93       3.23       2.65         -
+  Local                       :       0.30       0.99       0.61         -
+  Global                      :       1.59       2.72       2.05         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.97       1.27       1.09         -
+  Binary Read                 :       0.02       0.13       0.09         1
+  Binary Write                :       0.87       1.25       0.99         2
+
+Total Simulation              :      21.71      21.92      21.84         -
+----------------------------------------------------------------------
+Read solution 0 from './sdesign/naca_sowered.der'
+Gmres(2000) iterations:
+  0 6.911265e+04 6.911265e-06 (1.000000e-10)  
+  1 5.717428e+04 6.911265e-06 
+  2 2.037495e+04 6.911265e-06 
+  3 1.096957e+04 6.911265e-06 
+  4 9.702911e+03 6.911265e-06 
+  5 9.264374e+03 6.911265e-06 
+  6 8.574368e+03 6.911265e-06 
+  7 8.082766e+03 6.911265e-06 
+  8 7.661094e+03 6.911265e-06 
+  9 7.097694e+03 6.911265e-06 
+  10 6.019072e+03 6.911265e-06 
+  11 4.307141e+03 6.911265e-06 
+  12 3.240989e+03 6.911265e-06 
+  13 2.884236e+03 6.911265e-06 
+  14 2.760505e+03 6.911265e-06 
+  15 2.630550e+03 6.911265e-06 
+  16 2.438231e+03 6.911265e-06 
+  17 2.168833e+03 6.911265e-06 
+  18 1.759276e+03 6.911265e-06 
+  19 1.474211e+03 6.911265e-06 
+  20 1.292948e+03 6.911265e-06 
+  21 1.111622e+03 6.911265e-06 
+  22 9.514282e+02 6.911265e-06 
+  23 7.796390e+02 6.911265e-06 
+  24 6.137418e+02 6.911265e-06 
+  25 5.094738e+02 6.911265e-06 
+  26 4.256940e+02 6.911265e-06 
+  27 3.375116e+02 6.911265e-06 
+  28 2.719395e+02 6.911265e-06 
+  29 2.203753e+02 6.911265e-06 
+  30 1.831896e+02 6.911265e-06 
+  31 1.441324e+02 6.911265e-06 
+  32 1.186726e+02 6.911265e-06 
+  33 1.054986e+02 6.911265e-06 
+  34 9.272750e+01 6.911265e-06 
+  35 7.996938e+01 6.911265e-06 
+  36 7.383707e+01 6.911265e-06 
+  37 6.840615e+01 6.911265e-06 
+  38 6.070151e+01 6.911265e-06 
+  39 5.332682e+01 6.911265e-06 
+  40 4.600565e+01 6.911265e-06 
+  41 4.102401e+01 6.911265e-06 
+  42 3.683572e+01 6.911265e-06 
+  43 3.265403e+01 6.911265e-06 
+  44 2.832012e+01 6.911265e-06 
+  45 2.464160e+01 6.911265e-06 
+  46 2.188604e+01 6.911265e-06 
+  47 1.910773e+01 6.911265e-06 
+  48 1.669544e+01 6.911265e-06 
+  49 1.548064e+01 6.911265e-06 
+  50 1.479800e+01 6.911265e-06 
+  51 1.368309e+01 6.911265e-06 
+  52 1.242057e+01 6.911265e-06 
+  53 1.123794e+01 6.911265e-06 
+  54 1.024175e+01 6.911265e-06 
+  55 9.489949e+00 6.911265e-06 
+  56 8.666787e+00 6.911265e-06 
+  57 7.790538e+00 6.911265e-06 
+  58 7.101674e+00 6.911265e-06 
+  59 6.532401e+00 6.911265e-06 
+  60 6.297773e+00 6.911265e-06 
+  61 6.042579e+00 6.911265e-06 
+  62 5.623574e+00 6.911265e-06 
+  63 5.248512e+00 6.911265e-06 
+  64 4.815241e+00 6.911265e-06 
+  65 4.049979e+00 6.911265e-06 
+  66 3.272173e+00 6.911265e-06 
+  67 2.676878e+00 6.911265e-06 
+  68 2.397925e+00 6.911265e-06 
+  69 2.284439e+00 6.911265e-06 
+  70 2.200708e+00 6.911265e-06 
+  71 2.125846e+00 6.911265e-06 
+  72 1.982057e+00 6.911265e-06 
+  73 1.809666e+00 6.911265e-06 
+  74 1.647834e+00 6.911265e-06 
+  75 1.461238e+00 6.911265e-06 
+  76 1.305752e+00 6.911265e-06 
+  77 1.138412e+00 6.911265e-06 
+  78 9.874965e-01 6.911265e-06 
+  79 8.503599e-01 6.911265e-06 
+  80 7.484847e-01 6.911265e-06 
+  81 6.427519e-01 6.911265e-06 
+  82 5.568228e-01 6.911265e-06 
+  83 4.768763e-01 6.911265e-06 
+  84 4.257006e-01 6.911265e-06 
+  85 3.871100e-01 6.911265e-06 
+  86 3.609841e-01 6.911265e-06 
+  87 3.281403e-01 6.911265e-06 
+  88 2.772315e-01 6.911265e-06 
+  89 2.320793e-01 6.911265e-06 
+  90 1.912868e-01 6.911265e-06 
+  91 1.722675e-01 6.911265e-06 
+  92 1.617662e-01 6.911265e-06 
+  93 1.523612e-01 6.911265e-06 
+  94 1.310824e-01 6.911265e-06 
+  95 1.105481e-01 6.911265e-06 
+  96 1.026665e-01 6.911265e-06 
+  97 9.747279e-02 6.911265e-06 
+  98 9.111108e-02 6.911265e-06 
+  99 8.283755e-02 6.911265e-06 
+  100 7.459371e-02 6.911265e-06 
+  101 6.845887e-02 6.911265e-06 
+  102 6.463684e-02 6.911265e-06 
+  103 6.056506e-02 6.911265e-06 
+  104 5.728340e-02 6.911265e-06 
+  105 5.095298e-02 6.911265e-06 
+  106 4.308225e-02 6.911265e-06 
+  107 3.683715e-02 6.911265e-06 
+  108 3.265268e-02 6.911265e-06 
+  109 2.809948e-02 6.911265e-06 
+  110 2.396136e-02 6.911265e-06 
+  111 2.095649e-02 6.911265e-06 
+  112 1.737765e-02 6.911265e-06 
+  113 1.417013e-02 6.911265e-06 
+  114 1.231240e-02 6.911265e-06 
+  115 1.101724e-02 6.911265e-06 
+  116 9.465428e-03 6.911265e-06 
+  117 8.130844e-03 6.911265e-06 
+  118 6.756678e-03 6.911265e-06 
+  119 5.543557e-03 6.911265e-06 
+  120 4.617564e-03 6.911265e-06 
+  121 4.059338e-03 6.911265e-06 
+  122 3.718581e-03 6.911265e-06 
+  123 3.396220e-03 6.911265e-06 
+  124 3.089231e-03 6.911265e-06 
+  125 2.906028e-03 6.911265e-06 
+  126 2.837063e-03 6.911265e-06 
+  127 2.784333e-03 6.911265e-06 
+  128 2.739597e-03 6.911265e-06 
+  129 2.697039e-03 6.911265e-06 
+  130 2.687849e-03 6.911265e-06 
+  131 2.687211e-03 6.911265e-06 
+  132 2.685975e-03 6.911265e-06 
+  133 2.685891e-03 6.911265e-06 
+  134 2.685794e-03 6.911265e-06 
+  135 2.683205e-03 6.911265e-06 
+  136 2.682320e-03 6.911265e-06 
+  137 2.681071e-03 6.911265e-06 
+  138 2.664692e-03 6.911265e-06 
+  139 2.626247e-03 6.911265e-06 
+  140 2.518124e-03 6.911265e-06 
+  141 2.441487e-03 6.911265e-06 
+  142 2.401207e-03 6.911265e-06 
+  143 2.383066e-03 6.911265e-06 
+  144 2.373211e-03 6.911265e-06 
+  145 2.362156e-03 6.911265e-06 
+  146 2.339720e-03 6.911265e-06 
+  147 2.247074e-03 6.911265e-06 
+  148 2.071307e-03 6.911265e-06 
+  149 1.841150e-03 6.911265e-06 
+  150 1.582550e-03 6.911265e-06 
+  151 1.309190e-03 6.911265e-06 
+  152 1.116920e-03 6.911265e-06 
+  153 9.784156e-04 6.911265e-06 
+  154 8.283428e-04 6.911265e-06 
+  155 6.936039e-04 6.911265e-06 
+  156 5.858343e-04 6.911265e-06 
+  157 4.855569e-04 6.911265e-06 
+  158 3.954662e-04 6.911265e-06 
+  159 3.335755e-04 6.911265e-06 
+  160 2.975850e-04 6.911265e-06 
+  161 2.569211e-04 6.911265e-06 
+  162 2.070932e-04 6.911265e-06 
+  163 1.677372e-04 6.911265e-06 
+  164 1.366606e-04 6.911265e-06 
+  165 1.082153e-04 6.911265e-06 
+  166 8.993086e-05 6.911265e-06 
+  167 7.403451e-05 6.911265e-06 
+  168 6.253688e-05 6.911265e-06 
+  169 5.050303e-05 6.911265e-06 
+  170 4.071607e-05 6.911265e-06 
+  171 3.506571e-05 6.911265e-06 
+  172 3.161417e-05 6.911265e-06 
+  173 2.724398e-05 6.911265e-06 
+  174 2.363795e-05 6.911265e-06 
+  175 2.017374e-05 6.911265e-06 
+  176 1.716800e-05 6.911265e-06 
+  177 1.440211e-05 6.911265e-06 
+  178 1.234544e-05 6.911265e-06 
+  179 1.020359e-05 6.911265e-06 
+  180 8.334779e-06 6.911265e-06 
+  181 6.935235e-06 6.911265e-06 
+  182 5.929803e-06 6.911265e-06 
+Wrote solution 0 to './results/naca_direct_sens.pres'
+=============================writeDerivativeOfMatchPressureToDisk
+
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_sowered.vmo'
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=6): 28.87 MB
+Memory for Gmres(80) solver: 74.63 MB
+Memory required for matvec with H2: 162.14+17.40=179.54 MB
+Memory required for matvec with H1 (dim=6): 57.73 MB
+Memory for ILU(0) preconditioner (dim=6): 28.87 MB
+Memory for Gmres(2000) solver: 1843.69 MB
+Memory required for matvec with dRdX: 1057.64 MB
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+******************************************
+*** Fluid Shape Optimization Interface ***
+******************************************
+Spatial residual norm = 6.325441625810e+05
+Time for one residual evaluation: 0.004499 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 4.399483e-01, Cfl = 1.000000e+00, Elapsed Time = 9.05e-02 s
+It     2: Res = 2.773950e-01, Cfl = 5.000000e+00, Elapsed Time = 1.96e-01 s
+It     3: Res = 1.220000e-01, Cfl = 1.000000e+01, Elapsed Time = 3.16e-01 s
+It     4: Res = 4.366435e-02, Cfl = 1.500000e+01, Elapsed Time = 4.43e-01 s
+It     5: Res = 1.846773e-02, Cfl = 2.000000e+01, Elapsed Time = 5.88e-01 s
+It     6: Res = 1.762820e-02, Cfl = 2.500000e+01, Elapsed Time = 7.37e-01 s
+It     7: Res = 1.755626e-02, Cfl = 3.000000e+01, Elapsed Time = 8.87e-01 s
+It     8: Res = 1.504272e-02, Cfl = 3.500000e+01, Elapsed Time = 1.04e+00 s
+It     9: Res = 1.140668e-02, Cfl = 4.000000e+01, Elapsed Time = 1.20e+00 s
+It    10: Res = 7.847639e-03, Cfl = 4.500000e+01, Elapsed Time = 1.37e+00 s
+It    11: Res = 5.029497e-03, Cfl = 5.000000e+01, Elapsed Time = 1.53e+00 s
+It    12: Res = 3.126893e-03, Cfl = 5.500000e+01, Elapsed Time = 1.70e+00 s
+It    13: Res = 1.978945e-03, Cfl = 6.000000e+01, Elapsed Time = 1.96e+00 s
+It    14: Res = 1.244212e-03, Cfl = 7.807220e+01, Elapsed Time = 2.21e+00 s
+It    15: Res = 7.698874e-04, Cfl = 1.080374e+02, Elapsed Time = 2.43e+00 s
+It    16: Res = 4.622331e-04, Cfl = 1.511823e+02, Elapsed Time = 2.68e+00 s
+It    17: Res = 2.445533e-04, Cfl = 2.160714e+02, Elapsed Time = 2.98e+00 s
+It    18: Res = 8.628602e-05, Cfl = 3.373949e+02, Elapsed Time = 3.35e+00 s
+It    19: Res = 2.802150e-05, Cfl = 6.995869e+02, Elapsed Time = 3.86e+00 s
+It    20: Res = 1.105814e-05, Cfl = 1.537291e+03, Elapsed Time = 4.61e+00 s
+It    21: Res = 3.348138e-06, Cfl = 2.947287e+03, Elapsed Time = 5.35e+00 s
+It    22: Res = 1.028352e-06, Cfl = 6.802016e+03, Elapsed Time = 6.66e+00 s
+It    23: Res = 3.534856e-07, Cfl = 1.000000e+04, Elapsed Time = 8.04e+00 s
+It    24: Res = 1.698143e-07, Cfl = 1.000000e+04, Elapsed Time = 9.59e+00 s
+It    25: Res = 9.703149e-08, Cfl = 1.000000e+04, Elapsed Time = 1.12e+01 s
+It    26: Res = 5.900767e-08, Cfl = 1.000000e+04, Elapsed Time = 1.27e+01 s
+It    27: Res = 3.685932e-08, Cfl = 1.000000e+04, Elapsed Time = 1.43e+01 s
+It    28: Res = 2.340567e-08, Cfl = 1.000000e+04, Elapsed Time = 1.59e+01 s
+It    29: Res = 1.502816e-08, Cfl = 1.000000e+04, Elapsed Time = 1.74e+01 s
+It    30: Res = 9.722659e-09, Cfl = 1.000000e+04, Elapsed Time = 1.91e+01 s
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       1.03       1.05       1.03         1
+
+Fluid Solution                :      18.92      18.94      18.94         -
+  Time Steps                  :       0.09       0.11       0.11        31
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :       6.19       6.44       6.31      1895
+  FE Fluxes                   :       3.39       3.61       3.52      1895
+  FV Jacobian                 :       0.53       0.56       0.55        32
+  FE Jacobian                 :       0.79       0.85       0.82        32
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.01       0.02       0.01         1
+  Preconditioner Setup        :       1.69       1.74       1.72        30
+  Linear Solver               :      16.72      16.76      16.74        30
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.01       0.01         1
+  Preconditioner Setup        :       0.00       0.00       0.00         0
+  Linear Solver               :       0.00       0.00       0.00         0
+
+Communication/Synchronization :       1.86       2.77       2.33         -
+  Local                       :       0.11       0.64       0.47         -
+  Global                      :       1.55       2.15       1.86         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.43       0.78       0.60         -
+  Binary Read                 :       0.00       0.01       0.01         1
+  Binary Write                :       0.42       0.77       0.59         2
+
+Total Simulation              :      20.35      20.52      20.44         -
+----------------------------------------------------------------------
+Read solution 0 from './sdesign/naca_sowered.der'
+Gmres(2000) iterations:
+  0 6.911265e+04 6.911265e-06 (1.000000e-10)  
+  1 5.717428e+04 6.911265e-06 
+  2 2.037495e+04 6.911265e-06 
+  3 1.096957e+04 6.911265e-06 
+  4 9.702911e+03 6.911265e-06 
+  5 9.264374e+03 6.911265e-06 
+  6 8.574368e+03 6.911265e-06 
+  7 8.082766e+03 6.911265e-06 
+  8 7.661094e+03 6.911265e-06 
+  9 7.097694e+03 6.911265e-06 
+  10 6.019072e+03 6.911265e-06 
+  11 4.307141e+03 6.911265e-06 
+  12 3.240989e+03 6.911265e-06 
+  13 2.884236e+03 6.911265e-06 
+  14 2.760505e+03 6.911265e-06 
+  15 2.630550e+03 6.911265e-06 
+  16 2.438231e+03 6.911265e-06 
+  17 2.168833e+03 6.911265e-06 
+  18 1.759276e+03 6.911265e-06 
+  19 1.474211e+03 6.911265e-06 
+  20 1.292948e+03 6.911265e-06 
+  21 1.111622e+03 6.911265e-06 
+  22 9.514282e+02 6.911265e-06 
+  23 7.796390e+02 6.911265e-06 
+  24 6.137418e+02 6.911265e-06 
+  25 5.094738e+02 6.911265e-06 
+  26 4.256940e+02 6.911265e-06 
+  27 3.375116e+02 6.911265e-06 
+  28 2.719395e+02 6.911265e-06 
+  29 2.203753e+02 6.911265e-06 
+  30 1.831896e+02 6.911265e-06 
+  31 1.441324e+02 6.911265e-06 
+  32 1.186726e+02 6.911265e-06 
+  33 1.054986e+02 6.911265e-06 
+  34 9.272750e+01 6.911265e-06 
+  35 7.996938e+01 6.911265e-06 
+  36 7.383707e+01 6.911265e-06 
+  37 6.840615e+01 6.911265e-06 
+  38 6.070151e+01 6.911265e-06 
+  39 5.332682e+01 6.911265e-06 
+  40 4.600565e+01 6.911265e-06 
+  41 4.102401e+01 6.911265e-06 
+  42 3.683572e+01 6.911265e-06 
+  43 3.265403e+01 6.911265e-06 
+  44 2.832012e+01 6.911265e-06 
+  45 2.464160e+01 6.911265e-06 
+  46 2.188604e+01 6.911265e-06 
+  47 1.910773e+01 6.911265e-06 
+  48 1.669544e+01 6.911265e-06 
+  49 1.548064e+01 6.911265e-06 
+  50 1.479800e+01 6.911265e-06 
+  51 1.368309e+01 6.911265e-06 
+  52 1.242057e+01 6.911265e-06 
+  53 1.123794e+01 6.911265e-06 
+  54 1.024175e+01 6.911265e-06 
+  55 9.489949e+00 6.911265e-06 
+  56 8.666787e+00 6.911265e-06 
+  57 7.790538e+00 6.911265e-06 
+  58 7.101674e+00 6.911265e-06 
+  59 6.532401e+00 6.911265e-06 
+  60 6.297773e+00 6.911265e-06 
+  61 6.042579e+00 6.911265e-06 
+  62 5.623574e+00 6.911265e-06 
+  63 5.248512e+00 6.911265e-06 
+  64 4.815241e+00 6.911265e-06 
+  65 4.049979e+00 6.911265e-06 
+  66 3.272173e+00 6.911265e-06 
+  67 2.676878e+00 6.911265e-06 
+  68 2.397925e+00 6.911265e-06 
+  69 2.284439e+00 6.911265e-06 
+  70 2.200708e+00 6.911265e-06 
+  71 2.125846e+00 6.911265e-06 
+  72 1.982057e+00 6.911265e-06 
+  73 1.809666e+00 6.911265e-06 
+  74 1.647834e+00 6.911265e-06 
+  75 1.461238e+00 6.911265e-06 
+  76 1.305752e+00 6.911265e-06 
+  77 1.138412e+00 6.911265e-06 
+  78 9.874965e-01 6.911265e-06 
+  79 8.503599e-01 6.911265e-06 
+  80 7.484847e-01 6.911265e-06 
+  81 6.427519e-01 6.911265e-06 
+  82 5.568228e-01 6.911265e-06 
+  83 4.768763e-01 6.911265e-06 
+  84 4.257006e-01 6.911265e-06 
+  85 3.871100e-01 6.911265e-06 
+  86 3.609841e-01 6.911265e-06 
+  87 3.281403e-01 6.911265e-06 
+  88 2.772315e-01 6.911265e-06 
+  89 2.320793e-01 6.911265e-06 
+  90 1.912868e-01 6.911265e-06 
+  91 1.722675e-01 6.911265e-06 
+  92 1.617662e-01 6.911265e-06 
+  93 1.523612e-01 6.911265e-06 
+  94 1.310824e-01 6.911265e-06 
+  95 1.105481e-01 6.911265e-06 
+  96 1.026665e-01 6.911265e-06 
+  97 9.747279e-02 6.911265e-06 
+  98 9.111108e-02 6.911265e-06 
+  99 8.283755e-02 6.911265e-06 
+  100 7.459371e-02 6.911265e-06 
+  101 6.845887e-02 6.911265e-06 
+  102 6.463684e-02 6.911265e-06 
+  103 6.056506e-02 6.911265e-06 
+  104 5.728340e-02 6.911265e-06 
+  105 5.095298e-02 6.911265e-06 
+  106 4.308225e-02 6.911265e-06 
+  107 3.683715e-02 6.911265e-06 
+  108 3.265268e-02 6.911265e-06 
+  109 2.809948e-02 6.911265e-06 
+  110 2.396136e-02 6.911265e-06 
+  111 2.095649e-02 6.911265e-06 
+  112 1.737765e-02 6.911265e-06 
+  113 1.417013e-02 6.911265e-06 
+  114 1.231240e-02 6.911265e-06 
+  115 1.101724e-02 6.911265e-06 
+  116 9.465428e-03 6.911265e-06 
+  117 8.130844e-03 6.911265e-06 
+  118 6.756678e-03 6.911265e-06 
+  119 5.543557e-03 6.911265e-06 
+  120 4.617564e-03 6.911265e-06 
+  121 4.059338e-03 6.911265e-06 
+  122 3.718581e-03 6.911265e-06 
+  123 3.396220e-03 6.911265e-06 
+  124 3.089231e-03 6.911265e-06 
+  125 2.906028e-03 6.911265e-06 
+  126 2.837063e-03 6.911265e-06 
+  127 2.784333e-03 6.911265e-06 
+  128 2.739597e-03 6.911265e-06 
+  129 2.697039e-03 6.911265e-06 
+  130 2.687849e-03 6.911265e-06 
+  131 2.687211e-03 6.911265e-06 
+  132 2.685975e-03 6.911265e-06 
+  133 2.685891e-03 6.911265e-06 
+  134 2.685794e-03 6.911265e-06 
+  135 2.683205e-03 6.911265e-06 
+  136 2.682320e-03 6.911265e-06 
+  137 2.681071e-03 6.911265e-06 
+  138 2.664692e-03 6.911265e-06 
+  139 2.626247e-03 6.911265e-06 
+  140 2.518124e-03 6.911265e-06 
+  141 2.441487e-03 6.911265e-06 
+  142 2.401207e-03 6.911265e-06 
+  143 2.383066e-03 6.911265e-06 
+  144 2.373211e-03 6.911265e-06 
+  145 2.362156e-03 6.911265e-06 
+  146 2.339720e-03 6.911265e-06 
+  147 2.247074e-03 6.911265e-06 
+  148 2.071307e-03 6.911265e-06 
+  149 1.841150e-03 6.911265e-06 
+  150 1.582550e-03 6.911265e-06 
+  151 1.309190e-03 6.911265e-06 
+  152 1.116920e-03 6.911265e-06 
+  153 9.784156e-04 6.911265e-06 
+  154 8.283428e-04 6.911265e-06 
+  155 6.936039e-04 6.911265e-06 
+  156 5.858343e-04 6.911265e-06 
+  157 4.855569e-04 6.911265e-06 
+  158 3.954662e-04 6.911265e-06 
+  159 3.335755e-04 6.911265e-06 
+  160 2.975850e-04 6.911265e-06 
+  161 2.569211e-04 6.911265e-06 
+  162 2.070932e-04 6.911265e-06 
+  163 1.677372e-04 6.911265e-06 
+  164 1.366606e-04 6.911265e-06 
+  165 1.082153e-04 6.911265e-06 
+  166 8.993086e-05 6.911265e-06 
+  167 7.403451e-05 6.911265e-06 
+  168 6.253688e-05 6.911265e-06 
+  169 5.050303e-05 6.911265e-06 
+  170 4.071607e-05 6.911265e-06 
+  171 3.506571e-05 6.911265e-06 
+  172 3.161417e-05 6.911265e-06 
+  173 2.724398e-05 6.911265e-06 
+  174 2.363795e-05 6.911265e-06 
+  175 2.017374e-05 6.911265e-06 
+  176 1.716800e-05 6.911265e-06 
+  177 1.440211e-05 6.911265e-06 
+  178 1.234544e-05 6.911265e-06 
+  179 1.020359e-05 6.911265e-06 
+  180 8.334779e-06 6.911265e-06 
+  181 6.935235e-06 6.911265e-06 
+  182 5.929803e-06 6.911265e-06 
+Wrote solution 0 to './results/naca_adjoint_sens.pres'
+=============================writeDerivativeOfMatchPressureToDisk
+
+[1;31mAERO-F finished[0m
+

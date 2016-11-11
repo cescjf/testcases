@@ -1,0 +1,364 @@
+
+
+[1;31mSDESIGN_ended[0m
+
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 8
+ ... Number of output result(s) = 8
+ ... Processing result 1 with tag 0     ... Processing result 2 with tag 1     ... Processing result 3 with tag 2     ... Processing result 4 with tag 3     ... Processing result 5 with tag 4     ... Processing result 6 with tag 5     ... Processing result 7 with tag 6     ... Processing result 8 with tag 7    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 1
+ ... Number of output result(s) = 1
+ ... Processing result 1 with tag 0    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 8
+ ... Number of output result(s) = 8
+ ... Processing result 1 with tag 0     ... Processing result 2 with tag 1     ... Processing result 3 with tag 2     ... Processing result 4 with tag 3     ... Processing result 5 with tag 4     ... Processing result 6 with tag 5     ... Processing result 7 with tag 6     ... Processing result 8 with tag 7    
+ ... Reading nodes from cluster 1
+ ... Reading nodes from cluster 2
+ ... Reading nodes from cluster 3
+ ... Reading nodes from cluster 4
+ ... Reading nodes from cluster 5
+ ... Reading nodes from cluster 6
+ ... Reading nodes from cluster 7
+ ... Reading nodes from cluster 8
+ ... Reading nodes from cluster 9
+ ... Reading nodes from cluster 10
+ ... Reading nodes from cluster 11
+ ... Reading nodes from cluster 12
+ ... Number of nodes (including overlap) = 20128
+ ... Number of nodes = 19296
+ ... Reading faces from cluster 1
+ ... Reading faces from cluster 2
+ ... Reading faces from cluster 3
+ ... Reading faces from cluster 4
+ ... Reading faces from cluster 5
+ ... Reading faces from cluster 6
+ ... Reading faces from cluster 7
+ ... Reading faces from cluster 8
+ ... Reading faces from cluster 9
+ ... Reading faces from cluster 10
+ ... Reading faces from cluster 11
+ ... Reading faces from cluster 12
+ ... Number of skin nodes = 1960
+ ... Number of skin faces = 1960
+ ... Number of input result(s) = 1
+ ... Number of output result(s) = 1
+ ... Processing result 1 with tag 0    
+[1;31mPREPROCESSED_MESH[0m
+
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_plus_sowered.vmo'
+Control volume statistics: min=2.134e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=5): 20.05 MB
+Memory for Gmres(80) solver: 62.19 MB
+Memory for ILU(0) preconditioner (dim=1): 0.80 MB
+Memory for Gmres(30) solver: 4.76 MB
+Spatial residual norm = 6.320710304143e+05
+Time for one residual evaluation: 0.004785 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 4.480951e-01, Cfl = 1.000000e+00, Elapsed Time = 2.43e-01 s
+It     2: Res = 2.812856e-01, Cfl = 5.000000e+00, Elapsed Time = 5.38e-01 s
+It     3: Res = 1.267607e-01, Cfl = 1.000000e+01, Elapsed Time = 8.69e-01 s
+It     4: Res = 4.556046e-02, Cfl = 1.500000e+01, Elapsed Time = 1.23e+00 s
+It     5: Res = 1.858489e-02, Cfl = 2.000000e+01, Elapsed Time = 1.65e+00 s
+It     6: Res = 1.747025e-02, Cfl = 2.500000e+01, Elapsed Time = 2.19e+00 s
+It     7: Res = 1.747565e-02, Cfl = 3.000000e+01, Elapsed Time = 2.76e+00 s
+It     8: Res = 1.500432e-02, Cfl = 3.500000e+01, Elapsed Time = 3.35e+00 s
+It     9: Res = 1.139650e-02, Cfl = 4.000000e+01, Elapsed Time = 3.99e+00 s
+It    10: Res = 7.865280e-03, Cfl = 4.500000e+01, Elapsed Time = 4.81e+00 s
+It    11: Res = 5.067240e-03, Cfl = 5.000000e+01, Elapsed Time = 5.52e+00 s
+It    12: Res = 3.164569e-03, Cfl = 5.500000e+01, Elapsed Time = 7.60e+00 s
+*** Warning: Gmres(80) solver reached 500 its (initial=8.61e-05, res=1.46e-13, target=5.27e-15, ratio = 2.77e+01)
+It    13: Res = 2.004687e-03, Cfl = 6.000000e+01, Elapsed Time = 1.33e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=7.50e-05, res=5.94e-14, target=5.47e-15, ratio = 1.09e+01)
+It    14: Res = 1.259367e-03, Cfl = 7.736906e+01, Elapsed Time = 1.84e+01 s
+It    15: Res = 7.770092e-04, Cfl = 1.071256e+02, Elapsed Time = 1.95e+01 s
+It    16: Res = 4.657631e-04, Cfl = 1.502110e+02, Elapsed Time = 2.07e+01 s
+It    17: Res = 2.465929e-04, Cfl = 2.149238e+02, Elapsed Time = 2.22e+01 s
+It    18: Res = 8.667618e-05, Cfl = 3.354390e+02, Elapsed Time = 2.71e+01 s
+It    19: Res = 2.742801e-05, Cfl = 6.973811e+02, Elapsed Time = 2.97e+01 s
+It    20: Res = 1.031984e-05, Cfl = 1.560501e+03, Elapsed Time = 3.39e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=4.38e-05, res=2.64e-12, target=1.48e-13, ratio = 1.79e+01)
+It    21: Res = 2.835845e-06, Cfl = 3.093349e+03, Elapsed Time = 4.06e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=9.96e-06, res=4.63e-12, target=2.19e-14, ratio = 2.11e+02)
+It    22: Res = 8.290883e-07, Cfl = 7.640508e+03, Elapsed Time = 4.79e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=1.88e-06, res=1.27e-12, target=2.19e-15, ratio = 5.82e+02)
+It    23: Res = 3.088000e-07, Cfl = 1.000000e+04, Elapsed Time = 5.55e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=3.21e-07, res=2.05e-13, target=1.35e-16, ratio = 1.51e+03)
+It    24: Res = 1.538515e-07, Cfl = 1.000000e+04, Elapsed Time = 6.31e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=3.08e-04, res=1.53e-05, target=3.08e-06, ratio = 4.97e+00)
+*** Warning: Gmres(80) solver reached 500 its (initial=4.70e-08, res=7.95e-14, target=3.58e-18, ratio = 2.22e+04)
+It    25: Res = 8.741543e-08, Cfl = 1.000000e+04, Elapsed Time = 7.09e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=1.17e-04, res=1.25e-05, target=1.17e-06, ratio = 1.07e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=9.42e-09, res=1.03e-13, target=2.06e-19, ratio = 5.00e+05)
+It    26: Res = 5.210524e-08, Cfl = 1.000000e+04, Elapsed Time = 7.88e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=7.21e-05, res=8.16e-06, target=7.21e-07, ratio = 1.13e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=2.08e-09, res=7.59e-14, target=1.45e-20, ratio = 5.23e+06)
+It    27: Res = 3.176782e-08, Cfl = 1.000000e+04, Elapsed Time = 8.66e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=4.44e-05, res=5.07e-06, target=4.44e-07, ratio = 1.14e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=6.75e-10, res=8.72e-14, target=3.05e-21, ratio = 2.86e+07)
+It    28: Res = 1.965932e-08, Cfl = 1.000000e+04, Elapsed Time = 9.48e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=2.75e-05, res=3.11e-06, target=2.75e-07, ratio = 1.13e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=3.11e-10, res=4.13e-14, target=1.75e-21, ratio = 2.36e+07)
+It    29: Res = 1.229489e-08, Cfl = 1.000000e+04, Elapsed Time = 1.03e+02 s
+*** Warning: Gmres(30) solver reached 30 its (initial=1.72e-05, res=1.90e-06, target=1.72e-07, ratio = 1.11e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=2.35e-10, res=7.58e-14, target=3.84e-21, ratio = 1.97e+07)
+It    30: Res = 7.745316e-09, Cfl = 1.000000e+04, Elapsed Time = 1.12e+02 s
+Wrote solution 0 to './results/naca_plus_steady.pres'
+Wrote solution 0 to './results/naca_plus_steady.disp'
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       1.45       1.45       1.45         1
+
+Fluid Solution                :     111.53     111.53     111.53         -
+  Time Steps                  :       0.09       0.10       0.09        30
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :      42.11      44.12      43.30     12853
+  FE Fluxes                   :      24.48      26.08      25.15     12853
+  FV Jacobian                 :       1.18       1.30       1.23       180
+  FE Jacobian                 :       1.12       1.19       1.16       180
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.00       0.00       0.00         0
+  Preconditioner Setup        :       0.56       0.61       0.58        90
+  Linear Solver               :     107.35     107.42     107.39       180
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.02       0.02         2
+  Preconditioner Setup        :       0.00       0.00       0.00         1
+  Linear Solver               :       0.26       0.26       0.26         1
+
+Communication/Synchronization :      12.32      17.60      14.50         -
+  Local                       :       0.86       2.57       1.83         -
+  Global                      :      10.87      15.04      12.68         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.86       1.32       1.15         -
+  Binary Read                 :       0.01       0.06       0.03         1
+  Binary Write                :       0.83       1.29       1.12         4
+
+Total Simulation              :     113.82     113.98     113.94         -
+----------------------------------------------------------------------
+
+  _______                              __________
+  ___    |_____ ______________         ___  ____/
+  __  /| |_  _ \__  ___/_  __ \__________  /_  
+  _  ___ |/  __/_  /    / /_/ /_/_____/_  __/    
+  /_/  |_|\___/ /_/     \____/         /_/     
+  Changeset ID: 52a12ed12890+ 1808+ 
+12 MPI CPU for 12 subdomains
+*** Warning: changed the orientation of 38592 boundary faces
+Node statistics: min=1624, max=1729, total=20128
+Edge statistics: min=7679, max=8113, total=95033
+Face statistics: min=3141, max=3309, total=38592
+Elem statistics: min=4434, max=4661, total=54816
+Control volume statistics: min=2.136e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 -0.000e+00)
+Memory for stiffness matrix (dim=3): 14.43 MB
+Memory for Jacobi preconditioner (dim=3): 1.38 MB
+Read solution 0 from './sdesign/naca_minus_sowered.vmo'
+Control volume statistics: min=2.139e-10, max=6.223e-02, total=1.252e+01
+Mesh bounding box: (Xmin,Ymin,Zmin) = (-2.000e+01 -2.000e+01 -1.000e-02)
+                   (Xmax,Ymax,Zmax) = (2.000e+01 2.000e+01 0.000e+00)
+Wrote solution 0 to 'DEFAULT.POS'
+[Probe] Number of probing nodes is 0
+Memory for ILU(0) preconditioner (dim=5): 20.05 MB
+Memory for Gmres(80) solver: 62.19 MB
+Memory for ILU(0) preconditioner (dim=1): 0.80 MB
+Memory for Gmres(30) solver: 4.76 MB
+Spatial residual norm = 6.330169279947e+05
+Time for one residual evaluation: 0.004678 s
+
+It     0: Res = 1.000000e+00, Cfl = 1.000000e+00, Elapsed Time = 0.00e+00 s
+It     1: Res = 4.477261e-01, Cfl = 1.000000e+00, Elapsed Time = 2.47e-01 s
+It     2: Res = 2.809156e-01, Cfl = 5.000000e+00, Elapsed Time = 5.39e-01 s
+It     3: Res = 1.266473e-01, Cfl = 1.000000e+01, Elapsed Time = 8.66e-01 s
+It     4: Res = 4.554725e-02, Cfl = 1.500000e+01, Elapsed Time = 1.27e+00 s
+It     5: Res = 1.853596e-02, Cfl = 2.000000e+01, Elapsed Time = 1.77e+00 s
+It     6: Res = 1.742291e-02, Cfl = 2.500000e+01, Elapsed Time = 2.22e+00 s
+It     7: Res = 1.745505e-02, Cfl = 3.000000e+01, Elapsed Time = 2.73e+00 s
+It     8: Res = 1.500263e-02, Cfl = 3.500000e+01, Elapsed Time = 3.31e+00 s
+It     9: Res = 1.140356e-02, Cfl = 4.000000e+01, Elapsed Time = 4.07e+00 s
+It    10: Res = 7.873140e-03, Cfl = 4.500000e+01, Elapsed Time = 4.74e+00 s
+It    11: Res = 5.071755e-03, Cfl = 5.000000e+01, Elapsed Time = 5.45e+00 s
+It    12: Res = 3.165035e-03, Cfl = 5.500000e+01, Elapsed Time = 6.36e+00 s
+*** Warning: Gmres(80) solver reached 500 its (initial=8.65e-05, res=4.03e-14, target=5.30e-15, ratio = 7.60e+00)
+It    13: Res = 2.002316e-03, Cfl = 6.000000e+01, Elapsed Time = 1.13e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=7.43e-05, res=5.87e-14, target=5.27e-15, ratio = 1.11e+01)
+It    14: Res = 1.255364e-03, Cfl = 7.743320e+01, Elapsed Time = 1.63e+01 s
+It    15: Res = 7.726937e-04, Cfl = 1.073646e+02, Elapsed Time = 1.83e+01 s
+It    16: Res = 4.621480e-04, Cfl = 1.507977e+02, Elapsed Time = 1.94e+01 s
+It    17: Res = 2.440936e-04, Cfl = 2.160992e+02, Elapsed Time = 2.08e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=1.63e-04, res=2.20e-13, target=9.07e-14, ratio = 2.42e+00)
+It    18: Res = 8.551068e-05, Cfl = 3.378396e+02, Elapsed Time = 2.62e+01 s
+It    19: Res = 2.734448e-05, Cfl = 7.040212e+02, Elapsed Time = 2.87e+01 s
+It    20: Res = 1.020580e-05, Cfl = 1.563836e+03, Elapsed Time = 3.21e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=4.71e-05, res=6.84e-12, target=1.63e-13, ratio = 4.19e+01)
+It    21: Res = 2.597307e-06, Cfl = 3.117504e+03, Elapsed Time = 3.87e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=9.33e-06, res=4.16e-12, target=1.92e-14, ratio = 2.16e+02)
+It    22: Res = 5.736756e-07, Cfl = 8.125193e+03, Elapsed Time = 4.59e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=2.07e-07, res=1.50e-13, target=2.08e-17, ratio = 7.22e+03)
+It    23: Res = 1.382554e-07, Cfl = 1.000000e+04, Elapsed Time = 5.37e+01 s
+*** Warning: Gmres(80) solver reached 500 its (initial=7.33e-09, res=7.20e-14, target=5.61e-20, ratio = 1.28e+06)
+It    24: Res = 4.968191e-08, Cfl = 1.000000e+04, Elapsed Time = 6.19e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=2.88e-04, res=1.43e-05, target=2.88e-06, ratio = 4.96e+00)
+*** Warning: Gmres(80) solver reached 500 its (initial=3.50e-09, res=1.23e-13, target=1.11e-19, ratio = 1.10e+06)
+It    25: Res = 2.725162e-08, Cfl = 1.000000e+04, Elapsed Time = 7.04e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=1.07e-04, res=1.15e-05, target=1.07e-06, ratio = 1.08e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=9.32e-10, res=8.93e-14, target=3.01e-20, ratio = 2.97e+06)
+It    26: Res = 1.634933e-08, Cfl = 1.000000e+04, Elapsed Time = 7.93e+01 s
+*** Warning: Gmres(30) solver reached 30 its (initial=6.67e-05, res=7.54e-06, target=6.67e-07, ratio = 1.13e+01)
+*** Warning: Gmres(80) solver reached 500 its (initial=6.31e-10, res=1.68e-13, target=9.80e-20, ratio = 1.71e+06)
+It    27: Res = 9.863423e-09, Cfl = 1.000000e+04, Elapsed Time = 8.86e+01 s
+Wrote solution 0 to './results/naca_minus_steady.pres'
+Wrote solution 0 to './results/naca_minus_steady.disp'
+Wrote solution 0 to 'DEFAULT.SOL'
+
+----------------------------------------------------------------------
+Elapsed Time Report (s)       :        Min        Max        Avg   # Calls
+
+Problem Setup                 :       2.32       2.33       2.33         1
+
+Fluid Solution                :      88.42      88.42      88.42         -
+  Time Steps                  :       0.07       0.07       0.07        27
+  Nodal Weights and Gradients :       0.00       0.00       0.00         0
+  FV Fluxes                   :      33.96      35.82      34.94     10417
+  FE Fluxes                   :      18.32      20.03      19.17     10417
+  FV Jacobian                 :       1.07       1.16       1.10       162
+  FE Jacobian                 :       0.99       1.06       1.03       162
+  VMS-LES Modeling            :       0.00       0.00       0.00         0
+  Dynamic VMS-LES Modeling    :       0.00       0.00       0.00         0
+  H2 Matrix Assembly          :       0.00       0.00       0.00         0
+  Preconditioner Setup        :       0.51       0.54       0.52        81
+  Linear Solver               :      84.82      84.88      84.85       162
+  Mesh Metrics Update         :       0.00       0.00       0.00         0
+
+Mesh Solution                 :       0.00       0.00       0.00         -
+  K Matrix Assembly           :       0.01       0.03       0.02         2
+  Preconditioner Setup        :       0.00       0.00       0.00         1
+  Linear Solver               :       1.49       1.50       1.50         1
+
+Communication/Synchronization :       9.34      15.05      12.26         -
+  Local                       :       0.65       2.47       1.55         -
+  Global                      :       8.54      13.96      10.71         -
+  RMA                         :       0.00       0.00       0.00         -
+  Inter                       :       0.00       0.00       0.00         0
+
+I/O                           :       0.51       0.99       0.75         -
+  Binary Read                 :       0.00       0.01       0.00         1
+  Binary Write                :       0.50       0.98       0.74         4
+
+Total Simulation              :      91.63      91.79      91.68         -
+----------------------------------------------------------------------
+[1;31mAEROF_ENDED[0m
+
