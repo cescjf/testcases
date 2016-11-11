@@ -1,6 +1,7 @@
 #/usr/bin/bash!
 
 perturbations=(0.01 0.001 0.0001 0.00001 0.000001 0.0000001 0.00000001)
+attackangles=(0.0 1.0 2.0 3.0 4.0 5.0)
 index=1
 
 cp -r template_ana anasim
