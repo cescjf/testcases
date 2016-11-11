@@ -75,12 +75,6 @@ under Equations {
   Type = NavierStokes;
   under TurbulenceClosure {
     Type = TurbulenceModel;
-    under TurbulenceModel {
-      Type = SpalartAllmaras;
-      under SpalartAllmaras {
-        Form = Original;
-      }
-  }
   }
 }
 
