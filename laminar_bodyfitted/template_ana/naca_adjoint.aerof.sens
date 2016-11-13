@@ -73,15 +73,30 @@ under Surfaces {
 
 under Equations {
   Type = NavierStokes;
+  under FluidModel[0] {
+    Fluid = PerfectGas;
+    under GasModel {
+      SpecificHeatRatio = 1.4;
+      IdealGasConstant = 287.1;
+    }
+  }
+  under ThermalConductivityModel {
+    Type = ConstantPrandtl;
+    Prandtl = 0.72;
+  }
+  under ViscosityModel {
+    Type = Constant;
+    DynamicViscosity = 1.7054e-04;
+  }
   under TurbulenceClosure {
-    Type = TurbulenceModel;
+    Type = None;
   }
 }
 
 under BoundaryConditions {
   under Inlet {
     Mach = 0.5;
-    Alpha = 0.0;
+    Alpha = <alpha>;
     Beta = 0.0;
     Pressure = 30397.5; // Pascals (30,000 ft)
     Density = 0.45; // kg/m^3

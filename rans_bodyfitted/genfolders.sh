@@ -47,6 +47,6 @@ done
 
 #writing some basic information to info file
 #this information is later used by the pyhton scripts calc.py and plot.py
-echo "NUMANGLES $index_angle" >> info
-echo "NUMPERTURB $index_perturb" >> info
+echo "NUMANGLES ${index_angle-1}" >> info
+echo "NUMPERTURB ${index_perturb-1}" >> info
 
