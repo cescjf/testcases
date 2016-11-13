@@ -95,7 +95,7 @@ under Equations {
 
 under BoundaryConditions {
   under Inlet {
-    Mach = 0.5;
+    Mach = 0.1;
     Alpha = <alpha>;
     Beta = 0.0;
     Pressure = 30397.5; // Pascals (30,000 ft)
