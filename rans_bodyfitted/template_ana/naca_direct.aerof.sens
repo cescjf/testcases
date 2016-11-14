@@ -136,7 +136,7 @@ under Time  {
   under Implicit {
     MatrixVectorProduct = FiniteDifference;
     under Newton {
-      MaxIts = 1;
+      MaxIts = 3;
       Eps = 1e-5;
       under LinearSolver {
         under NavierStokes {
