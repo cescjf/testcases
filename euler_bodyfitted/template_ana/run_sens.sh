@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N anasim_euler_bodyfitted
+#PBS -N anasim_laminar_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
@@ -11,7 +11,7 @@ function printSuccess() {
    printf "${RED}$1${NC}\n\n"
 }
 
-CURRENT_DIR='<casepath>/anasim'
+CURRENT_DIR='<casepath>/anasim_<index_angle>'
 AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.opt
 SOWER_EXEC=/home/mzahr/frg_codes/sower/bin/sower.Linux
 XP2EXO_EXEC=/home/pavery/bin/xp2exo
