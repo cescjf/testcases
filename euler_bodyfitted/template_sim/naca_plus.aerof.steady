@@ -81,18 +81,11 @@ under Equations {
     Type = ConstantPrandtl;
     Prandtl = 0.72;
   }
-  under ViscosityModel {
-    Type = Constant;
-    DynamicViscosity = 1.7054e-04;
-  }
-  under TurbulenceClosure {
-    Type = None;
-  }
 }
 
 under BoundaryConditions {
   under Inlet {
-    Mach = 0.5;
+    Mach = 0.1;
     Alpha = <alpha>;
     Beta = 0.0;
     Pressure = 30397.5; // Pascals (30,000 ft)
@@ -116,12 +109,12 @@ under Space  {
 under Time  {
   Type = Implicit;
   MaxIts = 1000;
-  Eps = 1.e-8;
+  Eps = 1.e-7;
   //EpsAbs = 1.e-6;
   Cfl0 = 1.0;
   Cfl1 = 1.0;
   Cfl2 = 5.0;
-  CflMax = 1.0e4;
+  CflMax = 1.0e3;
   Ser = 0.7;
   CheckSolution=Off;
   CheckVelocity=Off;

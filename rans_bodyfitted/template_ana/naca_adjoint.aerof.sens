@@ -51,7 +51,7 @@ under MeshMotion {
   Mode = NonRecursive;
   NumIncrements = 1;
   under Newton {
-    MaxIts = 1;
+    MaxIts = 3;
     Eps = 0.01;
     under LinearSolver {
       Type = Cg;
@@ -98,7 +98,7 @@ under Equations {
 
 under BoundaryConditions {
   under Inlet {
-    Mach = 0.1;
+    Mach = 0.5;
     Alpha = <alpha>;
     Beta = 0.0;
     Pressure = 30397.5; // Pascals (30,000 ft)

@@ -33,7 +33,7 @@ for index_angle in range(1,NUMANGLES+1):
       data_adjoint = np.genfromtxt('./results/'+fileadjoint, delimiter=',',max_rows=1, skip_header=1,skip_footer=0, names=['absvar', 'dLx', 'dLy'])
 
       #create the name of the output file
-      epsfile='./results/comparison_'+str(index_angle)+".eps"
+      epsfile='./results/comparison_'+str(index_angle)+".png"
 
       f, (ax1, ax2) = plt.subplots(1, 2, sharey=False)
       plt.suptitle("RANS-bodyfitted  angle="+str(anglevalues[index_angle-1]))
@@ -73,7 +73,7 @@ for index_angle in range(1,NUMANGLES+1):
       ax2.legend(loc='upper center', bbox_to_anchor=(-0.2, -0.20),
                         fancybox=True, shadow=True, ncol=5)
 
-      plt.savefig(epsfile, format='eps', dpi=1000)
+      plt.savefig(epsfile, format='png', dpi=600)
       plt.close()
 
 
