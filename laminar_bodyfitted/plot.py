@@ -4,6 +4,11 @@ import os as os
 import matplotlib.pyplot as plt
 import numpy as np
 
+machvalues=[]
+with open('scriptinput/machnumbers') as f:
+  for line in f.readlines():
+    machvalues.append(float(line))
+
 anglevalues=[]
 with open('scriptinput/angles') as f:
   for line in f.readlines():
@@ -16,24 +21,30 @@ with open('info') as f:
 
 #check if all neccessary information has been read from the info-file
 if 'NUMANGLES' in locals() and 'NUMPERTURB' in locals():
-  print("info file is valid")
+  print('\x1b[0;37;42m' + 'Info-file is valid!' + '\x1b[0m')#green
+  #print('\x1b[0;37;44m' + 'Info-file is valid!' + '\x1b[0m')#blue
+  #print('\x1b[0;37;41m' + 'Info-file is valid!' + '\x1b[0m')#red
 else:
-  print("info file is invalid")
+  print('\x1b[0;37;42m' + 'Info-file is invalid!' + '\x1b[0m')
   exit()
 
+for index_mach in range(1,NUMMACH+1):
+    for index_angle in range(1,NUMANGLES+1):
 
-for index_angle in range(1,NUMANGLES+1):
-
-      data_sim = np.genfromtxt('./results/sim_'+str(index_angle)+'.csv', delimiter=',', skip_header=1,skip_footer=0, names=['stepsize', 'dLx', 'dLy'])
+      data_sim = np.genfromtxt('./results/sim_'+str(index_mach)+'_'+str(index_angle)+'.csv', delimiter=',', skip_header=1,skip_footer=0, names=['stepsize', 'dLx', 'dLy'])
 
       #create filenames of analytic simulations resuts from the manual on
-      filedirect = 'anasim_'+str(index_angle)+'_direct.csv'
-      fileadjoint = 'anasim_'+str(index_angle)+'_adjoint.csv'
+      filedirect = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_direct.csv'
+      fileadjoint = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_adjoint.csv'
       data_direct  = np.genfromtxt('./results/'+filedirect,  delimiter=',',max_rows=1, skip_header=1,skip_footer=0, names=['absvar', 'dLx', 'dLy'])
       data_adjoint = np.genfromtxt('./results/'+fileadjoint, delimiter=',',max_rows=1, skip_header=1,skip_footer=0, names=['absvar', 'dLx', 'dLy'])
 
+      #check if an appropriate outputfolder exist; if not, create it
+      if  not os.path.exists("./results/Ma"+str(machvalues[index_mach-1])):
+          os.makedirs("./results/Ma"+str(machvalues[index_mach-1]))
       #create the name of the output file
-      epsfile='./results/comparison_'+str(index_angle)+".png"
+      epsfile='./results/Ma'+str(machvalues[index_mach-1])+'/angle'+str(anglevalues[index_angle-1])+".png"
+      print("Writing file"+epsfile)
 
       f, (ax1, ax2) = plt.subplots(1, 2, sharey=False)
       plt.suptitle("Laminar-bodyfitted  angle="+str(anglevalues[index_angle-1]))
@@ -51,8 +62,6 @@ for index_angle in range(1,NUMANGLES+1):
       ################################################
       # Plots for Ly sensitivity                     #
       ################################################
-      print(data_sim['stepsize'])
-      print("\n")
       ax2.semilogx(data_sim['stepsize'], data_sim['dLy'],'-o', color='r', label='numerical result')
       ax2.semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_direct["dLy"],'-', color='k', label='direct method')
       ax2.semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_adjoint["dLy"],'--', color='g', label='adjoint method')

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N anasim_<index_mach>_<index_angle>_laminar_bodyfitted
+#PBS -N anasim_<index_mach>_<index_angle>_euler_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
