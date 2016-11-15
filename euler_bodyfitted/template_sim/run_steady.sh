@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#PBS -N sim_<index_angle>_<index_perturb>_laminar_bodyfitted
+#PBS -N sim_<index_mach>_<index_angle>_<index_perturb>_laminar_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
 
-CURRENT_DIR='<casepath>/sim_<index_angle>_<index_perturb>'
+CURRENT_DIR='<casepath>/sim_<index_mach>_<index_angle>_<index_perturb>'
 
 function printSuccess() {
    RED='\033[1;31m'

@@ -42,100 +42,14 @@ under SensitivityAnalysis {
   }
 }
 
-under MeshMotion {
-  Type = Basic;
-  Element = BallVertexSprings;
-  Mode = NonRecursive;
-  NumIncrements = 1;
-  under Newton {
-    MaxIts = 1;
-    Eps = 0.01;
-    under LinearSolver {
-      Type = Cg;
-      MaxIts = 5000;
-      KrylovVectors = 100;
-      Eps = 1e-12;
-      under Preconditioner { Type = Jacobi; }
-    }
-  }
-}
+sec_meshmotion
 
-under Surfaces {
-  under SurfaceData[2] {
-    Nx = 0.0;
-    Ny = 0.0;
-    Nz = 1.0;
-  }
-}
+sec_surfaces
 
-under Equations {
-  Type = Euler;
-  under FluidModel[0] {
-    Fluid = PerfectGas;
-    under GasModel {
-      SpecificHeatRatio = 1.4;
-      IdealGasConstant = 287.1;
-    }
-  }
-  under ThermalConductivityModel {
-    Type = ConstantPrandtl;
-    Prandtl = 0.72;
-  }
-}
+sec_equations
 
-under BoundaryConditions {
-  under Inlet {
-    Mach = 0.5;
-    Alpha = <alpha>;
-    Beta = 0.0;
-    Pressure = 30397.5; // Pascals (30,000 ft)
-    Density = 0.45; // kg/m^3
-  }
-}
+sec_bc
 
-under Space  {
-  under NavierStokes { 
-    Flux = Roe;
-    Reconstruction = Constant;
-    AdvectiveOperator = FiniteVolume;
-    Limiter = VanAlbada;
-    Gradient = LeastSquares;
-    Dissipation = SecondOrder;
-    Beta = 0.3333333333333333;
-    Gamma = 1.0;
-  }
-}
+sec_space
 
-under Time  {
-  Type = Implicit;
-  MaxIts = 1000;
-  Eps = 1.e-7;
-  //EpsAbs = 1.e-6;
-  Cfl0 = 1.0;
-  Cfl1 = 1.0;
-  Cfl2 = 5.0;
-  CflMax = 1.0e3;
-  Ser = 0.7;
-  CheckSolution=Off;
-  CheckVelocity=Off;
-  CheckPressure=Off;
-  CheckDensity=Off;
-  under Implicit {
-    MatrixVectorProduct = FiniteDifference;
-    under Newton {
-      MaxIts = 1000;
-      Eps = 1e-5;
-      under LinearSolver { 
-        under NavierStokes { 
-          Type = Gmres;
-          EpsFormula = Eisenstadt;
-          MaxIts = 500;
-          KrylovVectors = 80;
-          Eps = 1e-3;
-          //Output = "stdout";
-          under Preconditioner { Type = Ras; Fill = 0; }
-        }
-      }
-    }
-  }
-}
+sec_time_steady
