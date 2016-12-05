@@ -1,0 +1,41 @@
+under Problem {
+  //Type = SteadySensitivityAnalysis;
+  Type = Steady;
+  Mode = Dimensional;
+}
+
+under Input {
+  Connectivity = "../mesh/mesh_ref.con";
+  Geometry = "../mesh/mesh_ref.msh";
+  Decomposition = "../mesh/mesh_ref.dec";
+  CpuMap = "../mesh/mesh_ref.12cpu";
+  Prefix = "";
+  GeometryPrefix="";
+  InitialWallDisplacement="./sdesign/naca_minus_sowered.vmo";
+}
+
+under Output {
+  under Postpro {
+    Prefix = "";
+    LiftandDrag = "./results/naca_minus_steady.liftdrag";
+    Pressure = "./results/naca_minus_steady.pres";
+    Displacement = "./results/naca_minus_steady.disp";
+    Frequency = 0;
+  }
+  under Restart {
+    Prefix = "";
+    Frequency = 0;
+  }
+}
+
+sec_meshmotion
+
+sec_surfaces
+
+sec_equations
+
+sec_bc
+
+sec_space
+
+sec_time_steady

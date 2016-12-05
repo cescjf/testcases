@@ -1,50 +1,32 @@
-# testcases
+#Sensitivity Analysis test-cases
 
-This repository provides automated test cases for the validation of sensitivity analysis in AERO-F
-
-## Structure
-The repository consists of 3 main folders
- * euler_bodyfitted
- * laminar_bodyfitted
- * rans_bodyfitt
- * euler_embedded
- * laminar_embedded
- * rans_embedded
- 
-Each folder contains
- * manual_sensitivity analysis(SA)
- * analytic SA by direct method
- * analytic SA by adjoint method
- 
-## Usage
-The validation process is fully automated.
-Each folder contains both a template folder for the manual SA as well as the analytic ones.
-Script are then called, that create actual simulation folders out of the templates. The simulations are then run in parallel.
-A pyhthon script compares the results and writes them into a .csv-file. These results are then plotted as .eps-file by another python script
-
-## Scripts
-Each folder contains the following scripts
- * deletefolders.sh
- * genfolders.sh
- * runall.sh
- * calc.py
- * plot.py
- 
-The scripts are meant to be called in that order.
-
-### deletefolder.sh
-This script deletes possible remnats of previous simulations. It only leaves the template folders intact.
-
-## genfolders.sh
-This script creates the actual simulation folders out of the template folders.
-For the manual SA, several folders are created that differ only by the stepsize for the final difference.
+This folder contains all test-cases for the Sensitivity Analysis framework of [AERO-F](http://frg.bitbucket.org/aero-f/index.html).
 
 
-## runall.sh
-This script runs all calculations on the newly created folders in parallel.
+##General
 
-## calc.py
-This script creates .csv-files for both the manual and analytic sensitivity analysis. For the manual SA oit also calculates the central difference.
+A variety od parameter cobinations has to be tested in order to ensure full fuynctionality of the SA framework.
+All calculations evaluate the Sensitivity of the Lift and Drag(LD) with respect to the parameters lsuited below.
 
-## plot.py
-This script plots the results for the manual and analytic SA for camparison. The plots are saved as .eps-file.
+We test the follwowing features:
+
+- Equation type
+   - Euler equations
+   - Laminar Navier-Stokes equations
+   - RANS equations
+- Time formulations
+  - Eulerian
+  - Arbitrary Lagrangian Eulerian
+- Sensitivity Analysis Method
+  - Direct SA
+  - Adjoint SA
+- Sensitivity Type
+  - Shape sensitivity
+  - Mach sensitivity
+  - AoA sensitivity
+
+##Structure
+This folder first splits into 3 subfolders that cover the different Sensitivity types
+- [./shapesens](shapesens) covers sensitivity with respect to shape variables [README](./shapesens/README.md)
+- [./machsens](machsens) convers LD sensitivity with respect to the free-stream mach number [README](./machsens/README.md)
+- [./alphasens](alphasens) covers LD sensitivity with respect to the angle of attack [README](./alphasens/README.md)
