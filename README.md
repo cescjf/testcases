@@ -38,4 +38,4 @@ This folder first splits into 3 subfolders that cover the different Sensitivity 
 
 ##Results
 
-![](./statustable.html)
+[Status table](./statustable.html)
