@@ -21,7 +21,7 @@ under Output {
   under Postpro {
     Prefix = "";
     LiftandDragSensitivity = "./results/naca_direct_sens.liftdrag";
-    PressureSensitivity = "./results/naca_direct_sens.pres";
+    //PressureSensitivity = "./results/naca_direct_sens.pres";
     Frequency = 0;
   }
   under Restart {

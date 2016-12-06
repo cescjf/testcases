@@ -18,8 +18,8 @@ under Output {
   under Postpro {
     Prefix = "";
     LiftandDrag = "./results/naca_plus_steady.liftdrag";
-    Pressure = "./results/naca_plus_steady.pres";
-    Displacement = "./results/naca_plus_steady.disp";
+    //Pressure = "./results/naca_plus_steady.pres";
+    //Displacement = "./results/naca_plus_steady.disp";
     Frequency = 0;
   }
   under Restart {

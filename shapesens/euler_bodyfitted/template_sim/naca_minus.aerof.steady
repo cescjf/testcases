@@ -18,27 +18,13 @@ under Output {
   under Postpro {
     Prefix = "";
     LiftandDrag = "./results/naca_minus_steady.liftdrag";
-    Pressure = "./results/naca_minus_steady.pres";
-    Displacement = "./results/naca_minus_steady.disp";
+    //Pressure = "./results/naca_minus_steady.pres";
+    //Displacement = "./results/naca_minus_steady.disp";
     Frequency = 0;
   }
   under Restart {
     Prefix = "";
     Frequency = 0;
-  }
-}
-
-under SensitivityAnalysis {
-  SensitivityComputation = Analytical;
-  //MatrixVectorProduct = Exact;
-  SensitivityMesh = On;
-  under LinearSolver {
-    Type = Gmres;
-    MaxIts = 2000;
-    KrylovVectors = 2000;
-    Eps = 1.0e-10;
-    Output = "stdout";
-    under Preconditioner { Type = Ras; Fill = 0; }
   }
 }
 

@@ -11,7 +11,7 @@ function printSuccess() {
    printf "${RED}$1${NC}\n\n"
 }
 
-CURRENT_DIR='/home/lscheuch/project/testcases_alphasensitivity/euler_bodyfitted/anasim_1_1'
+CURRENT_DIR='/home/lscheuch/project/testcases/alphasens/euler_bodyfitted/anasim_1_1'
 AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.opt
 SOWER_EXEC=/home/mzahr/frg_codes/sower/bin/sower.Linux
 XP2EXO_EXEC=/home/pavery/bin/xp2exo
@@ -20,16 +20,16 @@ SDESIGN_EXEC=/home/lscheuch/codes/sdesign.d/Executables.d/sdesign.Linux.opt
 
 cd $CURRENT_DIR
 
-cd sdesign
-$SDESIGN_EXEC naca.sdesign
-printSuccess "SDESIGN finished"
+#cd sdesign
+#$SDESIGN_EXEC naca.sdesign
+#printSuccess "SDESIGN finished"
 
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca.der -bc -3 -ascii -out naca_sowered.der
-printSuccess "SOWER finished"
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca.der -bc -3 -ascii -out naca_sowered.der
+#printSuccess "SOWER finished"
 
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca.vmo -bc -3 -ascii -out naca_sowered.vmo
-printSuccess "SOWER on fluid finished"
-cd ..
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca.vmo -bc -3 -ascii -out naca_sowered.vmo
+#printSuccess "SOWER on fluid finished"
+#cd ..
 
 module load openmpi/openmpi161_intel13
 

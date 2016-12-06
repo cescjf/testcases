@@ -47,33 +47,33 @@ for index_mach in range(1,NUMMACH+1):
 
         # f, (ax1, ax2) = plt.subplots(NUMSHAPEVARS, 2, sharey=False)
         f, (multiaxes) = plt.subplots(1, 2, sharey=False)
-        f.set_size_inches(10,14)
+        f.set_size_inches(10,6)
         plt.suptitle("Euler-bodyfitted  \nangle="+str(anglevalues[index_angle-1])+"\nmach="+str(machvalues[index_mach-1]))
-        multiaxes[0][0].set_xlabel("step-size")
-        multiaxes[0][1].set_xlabel("step-size")
-        multiaxes[0][0].set_title("Sensitivity Lx")
-        multiaxes[0][1].set_title("Sensitivity Ly")
+        multiaxes[0].set_xlabel("step-size")
+        multiaxes[1].set_xlabel("step-size")
+        multiaxes[0].set_title("Sensitivity Lx")
+        multiaxes[1].set_title("Sensitivity Ly")
 
-        data_sim = np.genfromtxt('./results/sim_'+str(index_mach)+'_'+str(index_angle)+'_'+str(shapevarindex)+'.csv', delimiter=',', skip_header=1,skip_footer=0, names=['stepsize', 'dLx', 'dLy'])
+        data_sim = np.genfromtxt('./results/sim_'+str(index_mach)+'_'+str(index_angle)+'.csv', delimiter=',', skip_header=1,skip_footer=0, names=['stepsize', 'dLx', 'dLy'])
 
         ################################################
         # Plots for Lx sensitivity                     #
         ################################################
-        multiaxes[0][0].semilogx(data_sim['stepsize'], data_sim['dLx'],'-o', color='r', label='numerical result')
-        multiaxes[0][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_direct["dLx"][shapevars[0]-1],'-', color='k', label='direct method')
-        multiaxes[0][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_adjoint["dLx"][shapevars[0]-1],'--', color='g', label='adjoint method')
-        multiaxes[0][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0,'-.', color='b', linewidth=4)
-        multiaxes[0][0].set_ylabel("dLx/ds_"+str(shapevars[0]))
+        multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx'],'-o', color='r', label='numerical result')
+        multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_direct["dLx"],'-', color='k', label='direct method')
+        multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_adjoint["dLx"],'--', color='g', label='adjoint method')
+        multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0,'-.', color='b', linewidth=4)
+        multiaxes[0].set_ylabel(r"$\frac{\partial L_x}{\partial \alpha}$")
 
         ################################################
         # Plots for Ly sensitivity                     #
         ################################################
-        multiaxes[0][1].semilogx(data_sim['stepsize'], data_sim['dLy'],'-o', color='r', label='numerical result')
-        multiaxes[0][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_direct["dLy"][shapevars[0]-1],'-', color='k', label='direct method')
-        multiaxes[0][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_adjoint["dLy"][shapevars[0]-1],'--', color='g', label='adjoint method')
-        multiaxes[0][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0,'-.', color='b', linewidth=4)
-        multiaxes[0][1].yaxis.tick_right()
-        multiaxes[0][1].set_ylabel("dLy/ds_"+str(shapevars[0]))
+        multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy'],'-o', color='r', label='numerical result')
+        multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_direct["dLy"],'-', color='k', label='direct method')
+        multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_adjoint["dLy"],'--', color='g', label='adjoint method')
+        multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy']*0,'-.', color='b', linewidth=4)
+        multiaxes[1].yaxis.tick_right()
+        multiaxes[1].set_ylabel(r"$\frac{\partial L_y}{\partial \alpha}$")
 
         ################################################
         # Shift plots and add legends                  #
@@ -85,7 +85,7 @@ for index_mach in range(1,NUMMACH+1):
         # multiaxes[0][1].set_position([box.x0*1.1, box.y0 + box.height * 0.3,
                              # box.width*1.1, box.height * 0.7])
         # Put a legend below current axis
-        multiaxes[NUMSHAPEVARS-1][0].legend(loc='upper center', bbox_to_anchor=(1, -0.20),
+        multiaxes[0].legend(loc='upper center', bbox_to_anchor=(1, -0.20),
                                 fancybox=True, shadow=True, ncol=5)
 
         plt.savefig(epsfile, format='png', dpi=200)

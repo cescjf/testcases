@@ -6,7 +6,7 @@ CURDIR=$(pwd)
 find . -type d -name 'sim_*' | while read line; do
     echo $line
     cd $line
-    qsub -q sandybridge ./run_steady.sh  >& consoleout &
+    qsub -q sandybridge ./run_steady.sh  >& consoleout
     cd $CURDIR
 done
 

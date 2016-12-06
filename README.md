@@ -25,8 +25,17 @@ We test the follwowing features:
   - Mach sensitivity
   - AoA sensitivity
 
+##Setup
+All calculations are performed on a NACA0012 airfoil mesh as depicted below.
+![NACA0012](doc/mesh.png)
+
 ##Structure
 This folder first splits into 3 subfolders that cover the different Sensitivity types
 - [./shapesens](shapesens) covers sensitivity with respect to shape variables [README](./shapesens/README.md)
 - [./machsens](machsens) convers LD sensitivity with respect to the free-stream mach number [README](./machsens/README.md)
 - [./alphasens](alphasens) covers LD sensitivity with respect to the angle of attack [README](./alphasens/README.md)
+
+
+##Results
+
+![](./statustable.html)

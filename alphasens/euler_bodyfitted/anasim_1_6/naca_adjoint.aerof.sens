@@ -11,8 +11,6 @@ under Input {
   CpuMap = "../mesh/mesh_ref.12cpu";
   Prefix = "";
   GeometryPrefix="";
-  ShapeDerivative = "./sdesign/naca_sowered.der";
-  InitialWallDisplacement="./sdesign/naca_sowered.vmo";
   //Solution = "./results/naca_steady.sol";
   //OptimalPressure = "./results/naca_adjoint_sens.pres";
 }
@@ -21,7 +19,7 @@ under Output {
   under Postpro {
     Prefix = "";
     LiftandDragSensitivity = "./results/naca_adjoint_sens.liftdrag";
-    PressureSensitivity = "./results/naca_adjoint_sens.pres";
+    //PressureSensitivity = "./results/naca_adjoint_sens.pres";
     Frequency = 0;
   }
   under Restart {
@@ -35,7 +33,8 @@ under SensitivityAnalysis {
   SensitivityComputation = Analytical;
   //MatrixVectorProduct = Exact;
   SensitivityMesh = Off;
-  SensitivityMach = On
+  SensitivityMach = Off;
+  SensitivityAlpha = On;
   under LinearSolver {
     Type = Gmres;
     MaxIts = 2000;

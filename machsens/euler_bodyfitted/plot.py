@@ -63,7 +63,7 @@ for index_mach in range(1,NUMMACH+1):
         multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_direct["dLx"],'-', color='k', label='direct method')
         multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_adjoint["dLx"],'--', color='g', label='adjoint method')
         multiaxes[0].semilogx(data_sim['stepsize'], data_sim['dLx']*0,'-.', color='b', linewidth=4)
-        multiaxes[0].set_ylabel("dLx/dalpha")
+        multiaxes[0].set_ylabel("dLx/d_Ma")
 
         ################################################
         # Plots for Ly sensitivity                     #
@@ -73,7 +73,7 @@ for index_mach in range(1,NUMMACH+1):
         multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_adjoint["dLy"],'--', color='g', label='adjoint method')
         multiaxes[1].semilogx(data_sim['stepsize'], data_sim['dLy']*0,'-.', color='b', linewidth=4)
         multiaxes[1].yaxis.tick_right()
-        multiaxes[1].set_ylabel("dLy/ds_")
+        multiaxes[1].set_ylabel("dLy/ds_Ma")
 
         ################################################
         # Shift plots and add legends                  #

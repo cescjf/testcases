@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N sim_<index_mach>_<index_angle>_<index_shapevar>_<index_perturb>_euler_bodyfitted
+#PBS -N sim_<index_mach>_<index_angle>_<index_perturb>_euler_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
@@ -22,17 +22,17 @@ SDESIGN_EXEC=/home/lscheuch/codes/sdesign.d/Executables.d/sdesign.Linux.opt
 
 cd $CURRENT_DIR
 
-cd sdesign
-$SDESIGN_EXEC naca_plus.sdesign
-$SDESIGN_EXEC naca_minus.sdesign
-printSuccess SDESIGN_ended
+#cd sdesign
+#$SDESIGN_EXEC naca_plus.sdesign
+#$SDESIGN_EXEC naca_minus.sdesign
+#printSuccess SDESIGN_ended
 
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_plus.der -bc -3 -ascii -out naca_plus_sowered.der
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_plus.vmo -bc -3 -ascii -out naca_plus_sowered.vmo
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_minus.der -bc -3 -ascii -out naca_minus_sowered.der
-$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_minus.vmo -bc -3 -ascii -out naca_minus_sowered.vmo
-printSuccess PREPROCESSED_MESH
-cd ..
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_plus.der -bc -3 -ascii -out naca_plus_sowered.der
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_plus.vmo -bc -3 -ascii -out naca_plus_sowered.vmo
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_minus.der -bc -3 -ascii -out naca_minus_sowered.der
+#$SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref.msh -result naca_minus.vmo -bc -3 -ascii -out naca_minus_sowered.vmo
+#printSuccess PREPROCESSED_MESH
+#cd ..
 
 mpirun -n 12 $AEROF_EXEC naca_plus.aerof.steady
 mpirun -n 12 $AEROF_EXEC naca_minus.aerof.steady
