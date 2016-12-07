@@ -38,6 +38,10 @@ This folder first splits into 3 subfolders that cover the different Sensitivity 
 
 ##Results
 
+The following table summarizes the Verification of results.
+
+
+
 <table class="tg" style="undefined;table-layout: fixed; width: 510px">
 <colgroup>
 <col style="width: 79px">
@@ -72,51 +76,64 @@ This folder first splits into 3 subfolders that cover the different Sensitivity 
   <tr>
     <td class="tg-e3zv" rowspan="2">ALE</td>
     <td class="tg-031e">Direct</td>
-    <td class="tg-031e">&#10003</td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-031e">✓</td>                 <!-- ALE-Direct-Euler-s -->
+    <td class="tg-031e">!</td>                 <!-- ALE-Direct-Euler-α -->
+    <td class="tg-031e">!</td>                 <!-- ALE-Direct-Euler-Ma -->
+    <td class="tg-yw4l">✓</td>                 <!-- ALE-Direct-Laminar-s -->
+    <td class="tg-yw4l">!</td>                 <!-- ALE-Direct-Laminar-α -->
+    <td class="tg-yw4l">!</td>                 <!-- ALE-Direct-Laminar-Ma -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Direct-RANS-s -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Direct-RANS-α -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Direct-RANS-Ma -->
   </tr>
   <tr>
     <td class="tg-031e">Adjoint</td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-031e">✓</td>                 <!-- ALE-Adjoint-Euler-s -->
+    <td class="tg-031e">!</td>                 <!-- ALE-Adjoint-Euler-α -->
+    <td class="tg-031e">!</td>                 <!-- ALE-Adjoint-Euler-Ma -->
+    <td class="tg-yw4l">✓</td>                 <!-- ALE-Adjoint-Laminar-s -->
+    <td class="tg-yw4l">!</td>                 <!-- ALE-Adjoint-Laminar-α -->
+    <td class="tg-yw4l">!</td>                 <!-- ALE-Adjoint-Laminar-Ma -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Adjoint-RANS-s -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Adjoint-RANS-α -->
+    <td class="tg-yw4l">~</td>                 <!-- ALE-Adjoint-RANS-Ma -->
   </tr>
   <tr>
     <td class="tg-9hbo" rowspan="2">Embedded</td>
     <td class="tg-yw4l">Direct</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Euler-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Euler-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Euler-Ma -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Laminar-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Laminar-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-Laminar-Ma -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-RANS-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-RANS-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Direct-RANS-Ma -->
   </tr>
   <tr>
     <td class="tg-yw4l">Adjoint</td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Euler-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Euler-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Euler-Ma -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Laminar-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Laminar-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-Laminar-Ma -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-RANS-s -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-RANS-α -->
+    <td class="tg-yw4l">?</td>                 <!-- Embedded-Adjoint-RANS-Ma -->
   </tr>
 </table>
+
+
+where: 
+- s Shape sensitivity
+- α AoA sensitivity
+- Ma Mach number sensitivity
+
+and the results can be read as follows:
+- ✓ Everything working properly
+- ! Implemented, Running, but wrong results
+- ~ Implemented but not working(segfault, floating-point exception etc)
+- ✕ Not implemented
+- ? Not tested yet
