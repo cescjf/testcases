@@ -33,6 +33,7 @@ cd ..
 
 module load openmpi/openmpi161_intel13
 
+mpirun -n 12 $AEROF_EXEC naca_aerof.steady
 mpirun -n 12 $AEROF_EXEC naca_direct.aerof.sens
 mpirun -n 12 $AEROF_EXEC naca_adjoint.aerof.sens
 printSuccess "AERO-F finished"

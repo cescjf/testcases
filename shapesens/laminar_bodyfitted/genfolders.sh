@@ -37,9 +37,10 @@ do
 
     #puts the missing sections into the newly created aero-f input file
     #this replacements need to be done before any other
-    for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_sens sec_bc; do
+    for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_sens sec_time_steady sec_bc sec_reference_state; do
       python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_direct.aerof.sens key=${sec} text=./scriptinput/${sec}
       python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_adjoint.aerof.sens key=${sec} text=./scriptinput/${sec}
+      python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_aerof.steady key=${sec} text=./scriptinput/${sec}
     done
 
     #the following comand executes pwd, thes replaces all "/" by "\/" and stores the result in PWD
@@ -51,10 +52,12 @@ do
     #replace angle of attach in anasim file
     sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_direct.aerof.sens
     sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_adjoint.aerof.sens
+    sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_aerof.steady
 
     #replace machnumber in anasim file
     sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_direct.aerof.sens
     sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_adjoint.aerof.sens
+    sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_aerof.steady
 
 
 
@@ -71,7 +74,7 @@ do
         echo "sim_${index_mach}_${index_angle}  MACH:${curmach}  ANGLE:${curangle}  SHAPEVARIABLE:${curshapevar}  PERTURB:${i}"
 
         #replace the sections
-        for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_steady sec_bc; do
+        for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_steady sec_bc sec_reference_state; do
           python2.6 ./scriptinput/replacescript.py file=./sim_${index_mach}_${index_angle}_${index_shapevar}_${index_perturb}/naca_plus.aerof.steady key=${sec} text=./scriptinput/${sec}
           python2.6 ./scriptinput/replacescript.py file=./sim_${index_mach}_${index_angle}_${index_shapevar}_${index_perturb}/naca_minus.aerof.steady key=${sec} text=./scriptinput/${sec}
         done

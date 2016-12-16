@@ -1,21 +1,31 @@
 under Time  {
   Type = Implicit;
-  MaxIts = 1000;
+  MaxIts = 5000;
   Eps = 1.e-6;
   //EpsAbs = 1.e-6;
-  Cfl0 = 1.0;
-  Cfl1 = 1.0;
-  Cfl2 = 5.0;
-  CflMax = 1.0e3;
-  Ser = 0.7;
   CheckSolution=On;
-  CheckVelocity=Off;
-  CheckPressure=Off;
+  CheckVelocity=On;
+  CheckPressure=On;
   CheckDensity=On;
+  under CflLaw {
+    Strategy = Residual;
+    Cfl0 = 2.5;
+    Cfl1 = 2.5;
+    Cfl2 = 4.0;
+    CflMax = 1.0e3;
+    Ser = 0.7;
+    AngleGrowth = 2.0;
+    AngleZero = 0.2;
+    DFTHistory = 8;
+    FrequencyCutoff = 3;
+    DFTGrowth = 1.4;
+  }
   under Implicit {
-    MatrixVectorProduct = FiniteDifference;
+    TurbulenceModelCoupling = Weak;
+    MatrixVectorProduct = Approximate;
+    FiniteDifferenceOrder = SecondOrder;
     under Newton {
-      MaxIts = 1000;
+      MaxIts = 100;
       Eps = 1e-5;
       under LinearSolver { 
         under NavierStokes { 
@@ -24,7 +34,7 @@ under Time  {
           MaxIts = 500;
           KrylovVectors = 80;
           Eps = 1e-3;
-          //Output = "stdout";
+          Output = "consoleout_steady";
           under Preconditioner { Type = Ras; Fill = 0; }
         }
       }

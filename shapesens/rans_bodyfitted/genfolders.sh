@@ -7,17 +7,15 @@ machnumbers=$(<scriptinput/machnumbers)
 perturbations=$(<scriptinput/perturbations)
 attackangles=$(<scriptinput/angles)
 shapevars=$(<scriptinput/shapevariables)
-echo "SHapevars: ${shapevars}"
 
 
 sec_equations=$(<scriptinput/sec_equations)
 sec_equations="$sec_equations"
-echo $sec_equations
 
-
-echo "MACHNUMBERS:   $machnumbers"
-echo "ATTACKANGLES:  $attackangles"
-echo "PERTURBATIONS: $perturbations"
+echo "SHAPEVARS: ";echo "${shapevars}"
+echo "MACHNUMBERS: ";echo "$machnumbers"
+echo "ATTACKANGLES: ";echo "$attackangles"
+echo "PERTURBATIONS: ";echo "$perturbations"
 
 echo ""
 echo "STARTING FOLDER CREATION"
@@ -37,9 +35,10 @@ do
 
     #puts the missing sections into the newly created aero-f input file
     #this replacements need to be done before any other
-    for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_sens sec_bc; do
+    for sec in sec_equations sec_meshmotion sec_space sec_surfaces sec_time_sens sec_bc sec_time_steady; do
       python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_direct.aerof.sens key=${sec} text=./scriptinput/${sec}
       python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_adjoint.aerof.sens key=${sec} text=./scriptinput/${sec}
+      python2.6 ./scriptinput/replacescript.py file=./anasim_${index_mach}_${index_angle}/naca_aerof.steady key=${sec} text=./scriptinput/${sec}
     done
 
     #the following comand executes pwd, thes replaces all "/" by "\/" and stores the result in PWD
@@ -51,10 +50,12 @@ do
     #replace angle of attach in anasim file
     sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_direct.aerof.sens
     sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_adjoint.aerof.sens
+    sed -i "s/<alpha>/$curangle/g" ./anasim_${index_mach}_$index_angle/naca_aerof.steady
 
     #replace machnumber in anasim file
     sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_direct.aerof.sens
     sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_adjoint.aerof.sens
+    sed -i "s/<machnumber>/$curmach/g" ./anasim_${index_mach}_$index_angle/naca_aerof.steady
 
 
 

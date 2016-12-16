@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N anasim_<index_mach>_<index_angle>_laminar_bodyfitted
+#PBS -N anasim_<index_mach>_<index_angle>_euler_bodyfitted
 #PBS -M lscheuch@stanford.edu
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=48:00:00
@@ -33,6 +33,7 @@ cd ..
 
 module load openmpi/openmpi161_intel13
 
+mpirun -n 12 $AEROF_EXEC naca_aerof.steady
 mpirun -n 12 $AEROF_EXEC naca_direct.aerof.sens
 mpirun -n 12 $AEROF_EXEC naca_adjoint.aerof.sens
 printSuccess "AERO-F finished"

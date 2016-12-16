@@ -1,5 +1,5 @@
 under Problem {
-  Type = SteadySensitivityAnalysis;
+  Type = SensitivityAnalysis;
   //Type = Steady;
   Mode = Dimensional;
 }
@@ -13,8 +13,7 @@ under Input {
   GeometryPrefix="";
   ShapeDerivative = "./sdesign/naca_sowered.der";
   InitialWallDisplacement="./sdesign/naca_sowered.vmo";
-  //Solution = "./results/naca_steady.sol";
-  //OptimalPressure = "./results/naca_direct_sens.pres";
+  Solution = "./rst/naca_steady.sol";
 }
 
 under Output {
@@ -22,10 +21,6 @@ under Output {
     Prefix = "";
     LiftandDragSensitivity = "./results/naca_direct_sens.liftdrag";
     //PressureSensitivity = "./results/naca_direct_sens.pres";
-    Frequency = 0;
-  }
-  under Restart {
-    Prefix = "";
     Frequency = 0;
   }
 }
@@ -37,13 +32,15 @@ under SensitivityAnalysis {
   SensitivityMesh = On;
   under LinearSolver {
     Type = Gmres;
-    MaxIts = 2000;
-    KrylovVectors = 2000;
+    MaxIts = 1000;
+    KrylovVectors = 500;
     Eps = 1.0e-10;
-    Output = "stdout";
-    under Preconditioner { Type = Ras; Fill = 0; }
+    Output = "gmresout";
+    under Preconditioner { Type = Jacobi; Fill = 0; }
   }
 }
+
+sec_reference_state
 
 sec_meshmotion
 
