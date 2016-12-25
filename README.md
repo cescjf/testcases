@@ -5,8 +5,8 @@ This folder contains all test-cases for the Sensitivity Analysis framework of [A
 
 ##General
 
-A variety od parameter cobinations has to be tested in order to ensure full fuynctionality of the SA framework.
-All calculations evaluate the Sensitivity of the Lift and Drag(LD) with respect to the parameters lsuited below.
+A variety of parameter combinations has to be tested in order to ensure full functionality of the SA framework.
+All calculations evaluate the sensitivity of the Lift and Drag(LD) with respect to the parameters listed below.
 
 We test the follwowing features:
 
@@ -30,17 +30,56 @@ All calculations are performed on a NACA0012 airfoil mesh as depicted below.
 ![NACA0012](doc/mesh.png)
 
 ##Structure
-This folder first splits into 3 subfolders that cover the different Sensitivity types
+This repository splits into 3 subfolders that cover the different sensitivity types listed above:
 - [./shapesens](shapesens) covers sensitivity with respect to shape variables [README](./shapesens/README.md)
 - [./machsens](machsens) convers LD sensitivity with respect to the free-stream mach number [README](./machsens/README.md)
 - [./alphasens](alphasens) covers LD sensitivity with respect to the angle of attack [README](./alphasens/README.md)
+
+Each folder contains subfolders for Euler-bodyfitted, Laminar-bodyfitted and RANS-bodyfitted simulations which we refer to as "simulation-types".
+
+For each simulation-type a variety of parameters is varied. The variation of paramters is triggered via small textfiles in [simulation-type]/scriptinput.
+This is the connection between the textfiles and the paramters beeing varied:
+
+| filename | varied parameter |
+|----------------|---------|
+| angles | Angle of attack |
+| machnumers | Free stream mach number |
+| perturbation | Stencil size for the FD validation |
+| shapevariables | Indices of the abstract shape parameters being tested |
+
+##Usage
+Each folder contains a template folder for the analytic simulations: "template_ana" and a template folder for the FD validation" "template_sim". Once you have adjusted the scriptinput files to your needs, everything will done automatically by running the followng scripts in the right given order:
+
+1) Make sure remanants of previous simulations are deleted:
+```{r, engine='bash', count_lines}
+./deletefolders.sh
+```
+2) generate the analytic and FD simulation folders. A generic folder naming scheme will be applied, but you will not have to deal with it.
+```{r, engine='bash', count_lines}
+./genfolders.sh
+```
+3) Every generated folder will contain 2 simulations: Direct and Adjoint Sensitivity analysis for the parameter combination associated with that folder. Run all simulations on the Sandybridge queue of independece by typing:
+```{r, engine='bash', count_lines}
+./runall.sh
+```
+4) Proceed as soon as all calculations have finished. You can check the status of the queue anytime by typing
+```{r, engine='bash', count_lines}
+qstat -a
+```
+5) Every generic folder will contain it's results in it's subfolder "results". A Python script is used now to do the actual Finite Difference calculation. Also the results of different stencil sizes will be collected into one single file. The results will go into [simulation-type]/results.
+```{r, engine='bash', count_lines}
+python2.6 ./calc.py
+```
+6) Plot the resutls in an automated way. A Python script is used to collect the information of the just created .csv-files and plot them into .png-images. The images will provid a quick visual comparison of the FD and the analytic results. The plots will be automatically annotated. They will be stored into [simulation-type]/results/[machnumber]
+```{r, engine='bash', count_lines}
+python2.6 ./plot.py
+```
+7) At this point you can safely delete all the generated generic subfolders to clean up the simulation-type folder. This will not delete the simulation results or plots, since they are stored in [simulation-type]/results .
 
 
 ##Results
 
 The following table summarizes the Verification of results.
-
-
 
 <table class="tg" style="undefined;table-layout: fixed; width: 510px">
 <colgroup>
@@ -133,7 +172,7 @@ where:
 
 and the results can be read as follows:
 - ✓ Everything working properly
-- ! Implemented, Running, but wrong results
-- ~ Implemented but not working(segfault, floating-point exception etc)
+- ! Implemented, running, but wrong results
+- ~ Implemented but not working(segfault, floating-point exception, etc.)
 - ✕ Not implemented
 - ? Not tested yet
