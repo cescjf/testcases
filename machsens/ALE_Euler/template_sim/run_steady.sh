@@ -15,10 +15,9 @@ function printSuccess() {
 
 module load openmpi/openmpi161_intel13
 
-#AEROF_EXEC=/home/lscheuch/codes/aero-f_build/bin/aerof.opt
-AEROF_EXEC=/home/lscheuch/codes/SensMerge_build/bin/aerof.opt
-SOWER_EXEC=/home/mzahr/frg_codes/sower/bin/sower.Linux
-XP2EXO_EXEC=/home/pavery/bin/xp2exo
+AEROF_EXEC='<casepath>/../../executables/aerof'
+SOWER_EXEC='<casepath>/../../executables/sower'
+XP2EXO_EXEC='<casepath>/../../executables/xp2exo'
 SDESIGN_EXEC=/home/lscheuch/codes/sdesign.d/Executables.d/sdesign.Linux.opt
 
 cd $CURRENT_DIR
