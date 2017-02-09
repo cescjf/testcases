@@ -1,9 +1,0 @@
-under BoundaryConditions {
-  under Inlet {
-    Mach = <machnumber>;
-    Alpha = <alpha>;
-    Beta = 0.0;
-    Pressure = 30397.5; // Pascals (30,000 ft)
-    Density = 0.45; // kg/m^3
-  }
-}

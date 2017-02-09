@@ -76,27 +76,27 @@ The following table summarizes the Verification of results.
   <tr>
     <td class="tg-e3zv" rowspan="2">ALE</td>
     <td class="tg-031e">Direct</td>
-    <td class="tg-031e"> <a href="shapesens/euler_bodyfitted/results">✓</a> </td>                 <!-- ALE-Direct-Euler-s -->
-    <td class="tg-031e"> <a href="alphasens/euler_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-Euler-α -->
-    <td class="tg-031e"> <a href="machsens/euler_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-Euler-Ma -->
-    <td class="tg-yw4l"> <a href="shapesens/laminar_bodyfitted/results">✓</a> </td>                 <!-- ALE-Direct-Laminar-s -->
-    <td class="tg-yw4l"> <a href="alphasens/laminar_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-Laminar-α -->
-    <td class="tg-yw4l"> <a href="machsens/laminar_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-Laminar-Ma -->
-    <td class="tg-yw4l"> <a href="shapesens/rans_bodyfitted/results">✓</a> </td>                 <!-- ALE-Direct-RANS-s -->
-    <td class="tg-yw4l"> <a href="alphasens/rans_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-RANS-α -->
-    <td class="tg-yw4l"> <a href="machsens/rans_bodyfitted/results">!</a> </td>                 <!-- ALE-Direct-RANS-Ma -->
+    <td class="tg-031e"> <a href="shapesens/ALE_Euler/results">✓</a> </td>                 <!-- ALE-Direct-Euler-s -->
+    <td class="tg-031e"> <a href="alphasens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Direct-Euler-α -->
+    <td class="tg-031e"> <a href="machsens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Direct-Euler-Ma -->
+    <td class="tg-yw4l"> <a href="shapesens/ALE_Laminar/results">✓</a> </td>                 <!-- ALE-Direct-Laminar-s -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Direct-Laminar-α -->
+    <td class="tg-yw4l"> <a href="machsens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Direct-Laminar-Ma -->
+    <td class="tg-yw4l"> <a href="shapesens/ALE_RANS/results">✓</a> </td>                 <!-- ALE-Direct-RANS-s -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Direct-RANS-α -->
+    <td class="tg-yw4l"> <a href="machsens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Direct-RANS-Ma -->
   </tr>
   <tr>
     <td class="tg-031e">Adjoint</td>
-    <td class="tg-031e"> <a href="shapesens/euler_bodyfitted/results">✓</a> </td>                 <!-- ALE-Adjoint-Euler-s -->
-    <td class="tg-031e"> <a href="alphasens/euler_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-Euler-α -->
-    <td class="tg-031e"> <a href="machsens/euler_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-Euler-Ma -->
-    <td class="tg-yw4l"> <a href="shapesens/laminar_bodyfitted/results">✓</a> </td>                 <!-- ALE-Adjoint-Laminar-s -->
-    <td class="tg-yw4l"> <a href="alphasens/laminar_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-Laminar-α -->
-    <td class="tg-yw4l"> <a href="machsens/laminar_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-Laminar-Ma -->
-    <td class="tg-yw4l"> <a href="shapesens/rans_bodyfitted/results">✓</a> </td>                 <!-- ALE-Adjoint-RANS-s -->
-    <td class="tg-yw4l"> <a href="alphasens/rans_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-RANS-α -->
-    <td class="tg-yw4l"> <a href="machsens/rans_bodyfitted/results">!</a> </td>                 <!-- ALE-Adjoint-RANS-Ma -->
+    <td class="tg-031e"> <a href="shapesens/ALE_Euler/results">✓</a> </td>                 <!-- ALE-Adjoint-Euler-s -->
+    <td class="tg-031e"> <a href="alphasens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Adjoint-Euler-α -->
+    <td class="tg-031e"> <a href="machsens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Adjoint-Euler-Ma -->
+    <td class="tg-yw4l"> <a href="shapesens/ALE_Laminar/results">✓</a> </td>                 <!-- ALE-Adjoint-Laminar-s -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Adjoint-Laminar-α -->
+    <td class="tg-yw4l"> <a href="machsens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Adjoint-Laminar-Ma -->
+    <td class="tg-yw4l"> <a href="shapesens/ALE_RANS/results">✓</a> </td>                 <!-- ALE-Adjoint-RANS-s -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Adjoint-RANS-α -->
+    <td class="tg-yw4l"> <a href="machsens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Adjoint-RANS-Ma -->
   </tr>
   <tr>
     <td class="tg-9hbo" rowspan="2">Embedded</td>

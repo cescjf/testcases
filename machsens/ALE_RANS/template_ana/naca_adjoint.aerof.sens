@@ -1,0 +1,53 @@
+under Problem {
+  Type = SensitivityAnalysis;
+  Mode = Dimensional;
+}
+
+under Input {
+  Connectivity = "../mesh/mesh_ref.con";
+  Geometry = "../mesh/mesh_ref.msh";
+  Decomposition = "../mesh/mesh_ref.dec";
+  CpuMap = "../mesh/mesh_ref.12cpu";
+  Solution = "./rst/naca_steady.sol";
+  Prefix = "";
+  GeometryPrefix="";
+}
+
+under Output {
+  under Postpro {
+    Prefix = "";
+    LiftandDragSensitivity = "./results/naca_adjoint_sens.liftdrag";
+    Frequency = 0;
+  }
+}
+
+under SensitivityAnalysis {
+  Method = Direct;
+  SensitivityComputation = Analytical;
+  //MatrixVectorProduct = Exact;
+  AngleRadians = Off;
+  SensitivityMesh = Off;
+  SensitivityMach = On;
+  under LinearSolver {
+    Type = Gmres;
+    MaxIts = 400;
+    KrylovVectors = 2000;
+    Eps = 1.0e-10;
+    Output = "gmresout_adjoint";
+    under Preconditioner { Type = Jacobi; Fill = 0; }
+  }
+}
+
+sec_referencestate
+
+sec_meshmotion
+
+sec_surfaces
+
+sec_equations
+
+sec_bc
+
+sec_space
+
+sec_time_sens
