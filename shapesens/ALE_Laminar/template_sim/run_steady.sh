@@ -34,8 +34,8 @@ $SOWER_EXEC -fluid -split -con ../../mesh/mesh_ref.con -mesh ../../mesh/mesh_ref
 printSuccess PREPROCESSED_MESH
 cd ..
 
-mpirun -n 12 $AEROF_EXEC naca_plus.aerof.steady >& log_steady_plus.log
-mpirun -n 12 $AEROF_EXEC naca_minus.aerof.steady >& log_steady_minus.log
+mpirun -n 12 $AEROF_EXEC naca_plus.aerof.steady >& log_plus.log
+mpirun -n 12 $AEROF_EXEC naca_minus.aerof.steady >& log_minus.log
 printSuccess AEROF_ENDED
 
 #cd results

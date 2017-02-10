@@ -34,8 +34,8 @@ cd $CURRENT_DIR
 #printSuccess PREPROCESSED_MESH
 #cd ..
 
-mpirun -n 12 $AEROF_EXEC naca_plus.aerof.steady
-mpirun -n 12 $AEROF_EXEC naca_minus.aerof.steady
+mpirun -n 12 $AEROF_EXEC naca_plus.aerof.steady >& log_plus.log
+mpirun -n 12 $AEROF_EXEC naca_minus.aerof.steady >& log_minus.log
 printSuccess AEROF_ENDED
 
 #cd results
