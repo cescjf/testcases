@@ -13,8 +13,6 @@ under Input {
   GeometryPrefix="";
   ShapeDerivative = "./sdesign/naca_sowered.der";
   Solution="./rst/naca_steady.sol";
-  RestartData = "./rst/naca_steady.rst";
-  Position = "./rst/naca_steady.rst";
 }
 
 under Output {
