@@ -21,9 +21,9 @@ under Output {
   under Restart {
     Prefix = "";
     Solution = "./rst/naca_steady.sol";
-    RestartData = "./rst/naca_steady.rst";
-    Position = "./rst/naca_steady.pos";
-    FilePackage = "./rst/naca_steady.pkg";
+    //RestartData = "./rst/naca_steady.rst";
+    //Position = "./rst/naca_steady.pos";
+    //FilePackage = "./rst/naca_steady.pkg";
     Frequency = 0;
   }
 }
