@@ -34,7 +34,7 @@ under SensitivityAnalysis {
     KrylovVectors = 2000;
     Eps = 1.0e-10;
     Output = "gmresout_adjoint";
-    under Preconditioner { Type = Jacobi; Fill = 0; }
+    under Preconditioner { Type = Ras; Fill = 0; }
   }
 }
 
