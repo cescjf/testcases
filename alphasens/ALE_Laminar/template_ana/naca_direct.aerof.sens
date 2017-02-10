@@ -32,7 +32,7 @@ under SensitivityAnalysis {
     KrylovVectors = 500;
     Eps = 1.0e-10;
     Output = "stdout";
-    under Preconditioner { Type = Jacobi; Fill = 0; }
+    under Preconditioner { Type = Ras; Fill = 0; }
   }
 }
 
