@@ -34,7 +34,7 @@ under SensitivityAnalysis {
     MaxIts = 100;
     KrylovVectors = 500;
     Eps = 1.0e-10;
-    Output = "consoleaout_gmres_adjoint";
+    Output = "./results/linearsolver_direct.txt";
     under Preconditioner { Type = Ras; Fill = 0; }
   }
 }
