@@ -30,10 +30,10 @@ under SensitivityAnalysis {
   SensitivityMach = On;
   under LinearSolver {
     Type = Gmres;
-    MaxIts = 6000;
-    KrylovVectors = 2000;
-    Eps = 1.0e-10;
-    Output = "./results/linearsolver_direct.txt";
+    MaxIts = 1000;
+    KrylovVectors = 500;
+    Eps = 1e-8;
+    Output = "results/linearsolver_direct.txt";
     under Preconditioner { Type = Ras; Fill = 0; }
   }
 }

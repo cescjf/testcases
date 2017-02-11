@@ -34,7 +34,7 @@ under Time  {
           MaxIts = 500;
           KrylovVectors = 80;
           Eps = 1e-3;
-          Output = "consoleout_sens";
+          Output = "results/linearsolver_sens.txt";
           under Preconditioner { Type = Ras; Fill = 0; }
         }
       }

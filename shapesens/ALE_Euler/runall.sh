@@ -3,8 +3,15 @@
 CURDIR=$(pwd)
 #echo $CURDIR
 
-cd simulations
 SIMDIR=$(pwd)
+
+find . -type d -name 'anasim_*' | while read line; do
+  cd $line
+  echo $line
+  qsub -q sandybridge ./run_sens.sh  >& consoleout 
+  cd $SIMDIR
+done
+
 
 find . -type d -name 'sim_*' | while read line; do
     echo $line
@@ -14,10 +21,3 @@ find . -type d -name 'sim_*' | while read line; do
 done
 
 
-
-find . -type d -name 'anasim_*' | while read line; do
-  cd $line
-  echo $line
-  qsub -q sandybridge ./run_sens.sh  >& consoleout 
-  cd $SIMDIR
-done

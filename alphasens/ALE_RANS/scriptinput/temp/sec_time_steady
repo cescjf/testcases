@@ -24,7 +24,7 @@ under Time  {
           MaxIts = 500;
           KrylovVectors = 80;
           Eps = 1e-3;
-          //Output = "stdout";
+          Output = "results/linearsolver_steady.txt";
           under Preconditioner { Type = Ras; Fill = 0; }
         }
       }
