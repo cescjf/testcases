@@ -48,5 +48,21 @@ for index_mach in range(1,NUMMACH+1):
             fluidresultfile=simname+'/results/naca_'+method+'_sens.liftdrag'
             csvfile='results/'+simname+'_'+method+'.csv'
             writeCSVana(fluidresultfile,csvfile)
+            
+            temp=[]
+            with open(simname+'/results/linearsolver_'+method+'.txt') as sfile:
+                splittext=sfile.read().split('iterations')
+                splittext=splittext[1:]
+                for block in splittext:
+                    finaltext=block.splitlines()[1:-1]
+                    temp.append(finaltext)
+            
+            for index_shapevar in range(1,NUMSHAPEVARS+1):
+                with open('results/'+simname+'_'+str(index_shapevar)+'_'+str(method)+'_linearsolver.csv','w') as csvresultfile:
+                    csvresultfile.write('iteration,residual\n')
+                    for line in temp[index_shapevar-1]:
+                        csvresultfile.writelines(','.join(line.split()[0:2])+'\n')
+
+                    
 
 MainText('')

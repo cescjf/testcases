@@ -4,99 +4,86 @@ import os as os
 import matplotlib.pyplot as plt
 import numpy as np
 
-machvalues=[]
-with open('scriptinput/machnumbers') as f:
-  for line in f.readlines():
-    machvalues.append(float(line))
 
-anglevalues=[]
-with open('scriptinput/angles') as f:
-  for line in f.readlines():
-    anglevalues.append(float(line))
 
-shapevars=[]
-NUMSHAPEVARS=0
-with open('scriptinput/shapevariables') as f:
-  for line in f.readlines():
-    shapevars.append(int(line))
-    NUMSHAPEVARS=NUMSHAPEVARS+1
+from functionlib  import extractLifts, doFD, writeCSVana
+from functionlib2 import MainText, ReadInfo, ReadInputFiles
+from plotlib      import plotLifts, plotIterations, getCSVdata, setup_plots, save_plot
 
-#The following lines reads integer key-value pairs from a text file
-with open('info') as f:
-  for line in f.readlines():
-    exec(line.split()[0] + " = int(line.split()[1])")
+os.system("rm -rf ./results/Ma*/*")
 
-#check if all neccessary information has been read from the info-file
-if 'NUMANGLES' in locals() and 'NUMPERTURB' in locals():
-  print('\x1b[0;37;42m' + 'Info-file is valid!' + '\x1b[0m')#green
-  #print('\x1b[0;37;44m' + 'Info-file is valid!' + '\x1b[0m')#blue
-  #print('\x1b[0;37;41m' + 'Info-file is valid!' + '\x1b[0m')#red
-else:
-  print('\x1b[0;37;42m' + 'Info-file is invalid!' + '\x1b[0m')
-  exit()
+MainText("\nREADING INPUT-FILES")
+machvalues, anglevalues, shapevars, perturbvals, NUMMACH, NUMANGLES, NUMPERTURB, NUMSHAPEVARS = ReadInputFiles('scriptinput/')
 
+
+MainText("\nSTART PlOTTING")
 for index_mach in range(1,NUMMACH+1):
     for index_angle in range(1,NUMANGLES+1):
-        epsfile='./results/Ma'+str(machvalues[index_mach-1])+'/angle'+str(anglevalues[index_angle-1])+".png"
-        print("Writing file"+epsfile)
-
-
-        #create filenames of analytic simulations resuts from the manual on
-        filedirect = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_direct.csv'
-        fileadjoint = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_adjoint.csv'
-        data_direct  = np.genfromtxt('./results/'+filedirect,  delimiter=',',max_rows=8, skip_header=1,skip_footer=0, names=['absvar', 'dLx', 'dLy'])
-        data_adjoint = np.genfromtxt('./results/'+fileadjoint, delimiter=',',max_rows=8, skip_header=1,skip_footer=0, names=['absvar', 'dLx', 'dLy'])
+        plotfile='./results/Ma'+str(machvalues[index_mach-1])+'/angle'+str(anglevalues[index_angle-1])+".png"
+        print("Writing file"+plotfile)
 
         #check if an appropriate outputfolder exist; if not, create it
         if  not os.path.exists("./results/Ma"+str(machvalues[index_mach-1])):
           os.makedirs("./results/Ma"+str(machvalues[index_mach-1]))
-        #create the name of the output file
 
-        # f, (ax1, ax2) = plt.subplots(NUMSHAPEVARS, 2, sharey=False)
-        f, (multiaxes) = plt.subplots(NUMSHAPEVARS, 2, sharey=False)
-        f.set_size_inches(10,14)
-        plt.suptitle("RANS-bodyfitted  \nangle="+str(anglevalues[index_angle-1])+"\nmach="+str(machvalues[index_mach-1]))
-        multiaxes[NUMSHAPEVARS-1][0].set_xlabel("step-size")
-        multiaxes[NUMSHAPEVARS-1][1].set_xlabel("step-size")
-        multiaxes[0][0].set_title("Sensitivity Lx")
-        multiaxes[0][1].set_title("Sensitivity Ly")
+        #create filenames of analytic simulations resuts from the manual on
+        filedirect           = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_direct.csv'
+        fileadjoint          = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_adjoint.csv'
+        
+
+
+
+
+        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+"\nmach="+str(machvalues[index_mach-1])
+        f, multiaxes = setup_plots(plottitle,NUMSHAPEVARS,17,14)
 
         for shapevarindex in range(1,NUMSHAPEVARS+1):
-              print("CURSHAPEVARINDEX "+str(shapevarindex))
+            
+              file_sim='./results/sim_'+str(index_mach)+'_'+str(index_angle)+'_'+str(shapevarindex)+'.csv'
+              filedirect_linsolve  = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_'+str(shapevarindex)+'_direct_linearsolver.csv'
+              fileadjoint_linsolve = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_'+str(shapevarindex)+'_adjoint_linearsolver.csv'
+              data_sim, data_direct, data_adjoint, data_direct_linsolve,data_adjoint_linsolve=getCSVdata(file_sim,filedirect,fileadjoint,filedirect_linsolve,fileadjoint_linsolve)
 
               data_sim = np.genfromtxt('./results/sim_'+str(index_mach)+'_'+str(index_angle)+'_'+str(shapevarindex)+'.csv', delimiter=',', skip_header=1,skip_footer=0, names=['stepsize', 'dLx', 'dLy'])
 
               ################################################
               # Plots for Lx sensitivity                     #
               ################################################
-              multiaxes[shapevarindex-1][0].semilogx(data_sim['stepsize'], data_sim['dLx'],'-o', color='r', label='numerical result')
-              multiaxes[shapevarindex-1][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_direct["dLx"][shapevars[shapevarindex-1]-1],'-', color='k', label='direct method')
-              multiaxes[shapevarindex-1][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0+data_adjoint["dLx"][shapevars[shapevarindex-1]-1],'--', color='g', label='adjoint method')
-              multiaxes[shapevarindex-1][0].semilogx(data_sim['stepsize'], data_sim['dLx']*0,'-.', color='b', linewidth=4)
-              multiaxes[shapevarindex-1][0].set_ylabel("dLx/ds_"+str(shapevars[shapevarindex-1]))
+              axes         =multiaxes[shapevarindex-1][0]
+              xdata        =data_sim['stepsize']
+              ydata_num    =data_sim['dLx']
+              ydata_direct =data_sim['dLx']*0+data_direct["dLx"][int(shapevars[shapevarindex-1])-1]
+              ydata_adjoint=data_sim['dLx']*0+data_adjoint["dLx"][int(shapevars[shapevarindex-1])-1]
+              label="dLx/ds_"+str(shapevars[shapevarindex-1])
+              plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label)
+        
 
               ################################################
               # Plots for Ly sensitivity                     #
               ################################################
-              multiaxes[shapevarindex-1][1].semilogx(data_sim['stepsize'], data_sim['dLy'],'-o', color='r', label='numerical result')
-              multiaxes[shapevarindex-1][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_direct["dLy"][shapevars[shapevarindex-1]-1],'-', color='k', label='direct method')
-              multiaxes[shapevarindex-1][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0+data_adjoint["dLy"][shapevars[shapevarindex-1]-1],'--', color='g', label='adjoint method')
-              multiaxes[shapevarindex-1][1].semilogx(data_sim['stepsize'], data_sim['dLy']*0,'-.', color='b', linewidth=4)
-              multiaxes[shapevarindex-1][1].yaxis.tick_right()
-              multiaxes[shapevarindex-1][1].set_ylabel("dLy/ds_"+str(shapevars[shapevarindex-1]))
+              axes         =multiaxes[shapevarindex-1][1]
+              xdata        =data_sim['stepsize']
+              ydata_num    =data_sim['dLx']
+              ydata_direct =data_sim['dLy']*0+data_direct["dLy"][int(shapevars[shapevarindex-1])-1]
+              ydata_adjoint=data_sim['dLy']*0+data_adjoint["dLy"][int(shapevars[shapevarindex-1])-1]
+              label="dLy/ds_"+str(shapevars[shapevarindex-1])
+              plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label)
 
+              
               ################################################
-              # Shift plots and add legends                  #
+              # Plots for linear solver                      #
               ################################################
-              # box = multiaxes[shapevarindex-1][0].get_position()
-              # multiaxes[shapevarindex-1][0].set_position([box.x0, box.y0 + box.height * 0.3,
-                                   # box.width, box.height * 0.7])
-              # box = multiaxes[shapevarindex-1][1].get_position()
-              # multiaxes[shapevarindex-1][1].set_position([box.x0*1.1, box.y0 + box.height * 0.3,
-                                   # box.width*1.1, box.height * 0.7])
-              # Put a legend below current axis
+              axes=multiaxes[shapevarindex-1][2]
+              iter_direct =data_direct_linsolve ['iteration']
+              iter_adjoint=data_adjoint_linsolve['iteration']
+              res_direct  =data_direct_linsolve ['residual']
+              res_adjoint =data_adjoint_linsolve['residual']
+
+              plotIterations(axes,iter_direct,res_direct,iter_adjoint,res_adjoint)
+
         multiaxes[NUMSHAPEVARS-1][0].legend(loc='upper center', bbox_to_anchor=(1, -0.20),
                                 fancybox=True, shadow=True, ncol=5)
 
-        plt.savefig(epsfile, format='png', dpi=200)
-        plt.close()
+        save_plot(plotfile)
+
+MainText("")
