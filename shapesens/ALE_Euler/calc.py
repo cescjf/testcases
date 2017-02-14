@@ -3,7 +3,7 @@
 import os as os
 import sys
 
-sys.path.append('../')
+sys.path.append("../")
 
 from functionlib import extractLifts, doFD, writeCSVana
 from functionlib2 import MainText, ReadInfo, ReadInputFiles

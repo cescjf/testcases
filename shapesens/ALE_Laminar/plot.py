@@ -3,7 +3,9 @@
 import os as os
 import matplotlib.pyplot as plt
 import numpy as np
+import sys
 
+sys.path.append("../")
 
 
 from functionlib  import extractLifts, doFD, writeCSVana
