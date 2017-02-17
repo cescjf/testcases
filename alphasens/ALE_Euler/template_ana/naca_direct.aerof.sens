@@ -16,7 +16,22 @@ under Input {
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDragSensitivity = "./results/naca_direct_sens.liftdrag";
+    LiftandDragSensitivity         = "./results/naca_direct_sens.liftdrag";
+    SpatialResidualSensitivity     = "./results/SpatialResidualSensitivity_direct";
+    SpatialResidualNormSensitivity = "./results/SpatialResidualNormSensitivity_direct";
+    StateVectorSensitivity   = "./results/StateVectorSensitivity_direct";
+    DensitySensitivity       = "./results/DensitySensitivity_direct";
+    MachSensitivity          = "./results/MachSensitivity_direct";
+    PressureSensitivity      = "./results/PressureSensitivity_direct";
+    MatchPressureSensitivity = "./results/MatchPressureSensitivity_direct";
+    TemperatureSensitivity   = "./results/TemperatureSensitivity_direct";
+    TotalPressureSensitivity = "./results/TotalPressureSensitivity_direct";
+    NuTildeSensitivity       = "./results/NuTildeSensitivity_direct";
+    EddyViscositySensitivity = "./results/EddyViscositySensitivity_direct";
+    VelocityNormSensitivity  = "./results/VelocityNormSensitivity_direct";
+    VelocitySensitivity      = "./results/VelocitySensitivity_direct";
+    DisplacementSensitivity  = "./results/DisplacementSensitivity_direct";
+    ForceSensitivity         = "./results/ForceSensitivity_direct";
     Frequency = 0;
   }
 }
@@ -28,7 +43,7 @@ under SensitivityAnalysis {
   SensitivityAlpha = On;
   under LinearSolver {
     Type = Gmres;
-    MaxIts = 1000;
+    MaxIts = 500;
     KrylovVectors = 500;
     Eps = 1e-8;
     Output = "results/linearsolver_direct.txt";

@@ -19,7 +19,22 @@ under Input {
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDragSensitivity = "./results/naca_adjoint_sens.liftdrag";
+    LiftandDragSensitivity         = "./results/naca_adjoint_sens.liftdrag";
+    SpatialResidualSensitivity     = "./results/SpatialResidualSensitivity_adjoint";
+    SpatialResidualNormSensitivity = "./results/SpatialResidualNormSensitivity_adjoint";
+    StateVectorSensitivity   = "./results/StateVectorSensitivity_adjoint";
+    DensitySensitivity       = "./results/DensitySensitivity_adjoint";
+    MachSensitivity          = "./results/MachSensitivity_adjoint";
+    PressureSensitivity      = "./results/PressureSensitivity_adjoint";
+    MatchPressureSensitivity = "./results/MatchPressureSensitivity_adjoint";
+    TemperatureSensitivity   = "./results/TemperatureSensitivity_adjoint";
+    TotalPressureSensitivity = "./results/TotalPressureSensitivity_adjoint";
+    NuTildeSensitivity       = "./results/NuTildeSensitivity_adjoint";
+    EddyViscositySensitivity = "./results/EddyViscositySensitivity_adjoint";
+    VelocityNormSensitivity  = "./results/VelocityNormSensitivity_adjoint";
+    VelocitySensitivity      = "./results/VelocitySensitivity_adjoint";
+    DisplacementSensitivity  = "./results/DisplacementSensitivity_adjoint";
+    ForceSensitivity         = "./results/ForceSensitivity_adjoint";
     Frequency = 0;
   }
 }
@@ -31,7 +46,7 @@ under SensitivityAnalysis {
   SensitivityMesh = On;
   under LinearSolver {
     Type = Gmres;
-    MaxIts = 1000;
+    MaxIts = 500;
     KrylovVectors = 500;
     Eps = 1e-8;
     Output = "results/linearsolver_adjoint.txt";

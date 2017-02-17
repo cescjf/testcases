@@ -37,7 +37,7 @@ for index_mach in range(1,NUMMACH+1):
 
 
 
-        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+"\nmach="+str(machvalues[index_mach-1])
+        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+" mach="+str(machvalues[index_mach-1])+" (sim_"+str(index_mach)+"_"+str(index_angle)+")"
         f, multiaxes = setup_plots(plottitle,NUMSHAPEVARS,17,14)
 
         for shapevarindex in range(1,NUMSHAPEVARS+1):
@@ -66,7 +66,7 @@ for index_mach in range(1,NUMMACH+1):
               ################################################
               axes         =multiaxes[shapevarindex-1][1]
               xdata        =data_sim['stepsize']
-              ydata_num    =data_sim['dLx']
+              ydata_num    =data_sim['dLy']
               ydata_direct =data_sim['dLy']*0+data_direct["dLy"][int(shapevars[shapevarindex-1])-1]
               ydata_adjoint=data_sim['dLy']*0+data_adjoint["dLy"][int(shapevars[shapevarindex-1])-1]
               label="dLy/ds_"+str(shapevars[shapevarindex-1])
