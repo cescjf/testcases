@@ -87,8 +87,8 @@ do
       echo "angle: $curangle" >> sim_${index_mach}_${index_angle}_${index_perturb}/siminfo
 
       #replace angle of attach
-      plusangle=$(python -c "print $curangle+$i")
-      minusangle=$(python -c "print $curangle-$i")
+      plusangle=$(python2 -c "print $curangle+$i")
+      minusangle=$(python2 -c "print $curangle-$i")
       sed -i "s/<alpha>/$plusangle/g" ./sim_${index_mach}_${index_angle}_${index_perturb}/naca_plus.aerof.steady
       sed -i "s/<alpha>/$minusangle/g" ./sim_${index_mach}_${index_angle}_${index_perturb}/naca_minus.aerof.steady
 

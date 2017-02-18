@@ -89,8 +89,8 @@ do
       sed -i "s/<alpha>/$curangle/g" ./sim_${index_mach}_${index_angle}_${index_perturb}/naca_minus.aerof.steady
 
       #replace machnumber
-      plusmach=$(python -c "print $curmach+$i")
-      minusmach=$(python -c "print $curmach-$i")
+      plusmach=$(python2 -c "print $curmach+$i")
+      minusmach=$(python2 -c "print $curmach-$i")
       sed -i "s/<machnumber>/$plusmach/g" ./sim_${index_mach}_${index_angle}_${index_perturb}/naca_plus.aerof.steady
       sed -i "s/<machnumber>/$minusmach/g" ./sim_${index_mach}_${index_angle}_${index_perturb}/naca_minus.aerof.steady
 

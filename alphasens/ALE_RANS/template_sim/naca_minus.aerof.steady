@@ -25,7 +25,6 @@ under Output {
     EddyViscosity = "./results/EddyViscosity_minus";
     Mach          = "./results/Mach_minus";
     NuTilde       = "./results/NuTilde_minus";
-    StateVector   = "./results/StateVector_minus";
     Temperature   = "./results/Temperature_minus";
     TotalPressure = "./results/TotalPressure_minus";
     VelocityNorm  = "./results/VelocityNorm_minus";

@@ -20,7 +20,7 @@ def create_outtext(header,pluslines,minuslines,perturb):
   for plusline, minusline in zip(pluslines,minuslines):
     resultline=[]
     for plusval,minusval in zip (plusline.split(),minusline.split()):
-      fdval=(float(plusval)-float(minusval))/perturb
+      fdval=(float(plusval)-float(minusval))/(2*perturb)
       # print(fdval)
       # resultline.append(str(fdval))
       # resultline.append("{:.9f}".format(fdval))

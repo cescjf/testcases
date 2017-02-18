@@ -17,9 +17,18 @@ under Input {
 under Output {
   under Postpro {
     Prefix = "";
-    LiftandDrag = "./results/naca_plus_steady.liftdrag";
-    //Pressure = "./results/naca_plus_steady.pres";
-    //Displacement = "./results/naca_plus_steady.disp";
+    LiftandDrag   = "./results/naca_plus_steady.liftdrag";
+    Pressure      = "./results/Pressure_plus";
+    Displacement  = "./results/Displacement_plus";
+    Density       = "./results/Density_plus";
+    Displacement  = "./results/Displacement_plus";
+    EddyViscosity = "./results/EddyViscosity_plus";
+    Mach          = "./results/Mach_plus";
+    NuTilde       = "./results/NuTilde_plus";
+    Temperature   = "./results/Temperature_plus";
+    TotalPressure = "./results/TotalPressure_plus";
+    VelocityNorm  = "./results/VelocityNorm_plus";
+    Velocity      = "./results/Velocity_plus";
     Frequency = 0;
   }
   under Restart {
