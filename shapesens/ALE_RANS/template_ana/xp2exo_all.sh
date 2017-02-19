@@ -1,11 +1,11 @@
 #!/bin/bash
 XP2EXO_EXECUTABLE=/home/pavery/bin/xp2exo
 
-for method in direct adjoint; do
+for method in direct; do
 $XP2EXO_EXECUTABLE ../mesh/naca.top \
                    ./results/exo/all_quantities_${method}.exo \
                    results/xpost/DensitySensitivity_${method}.xpost \
-                   results/xpost/DisplacementSensitivity_${method}.xpost \
+                   results/xpost/MeshdispSensitivity_${method}.xpost \
                    results/xpost/EddyViscositySensitivity_${method}.xpost \
                    results/xpost/MachSensitivity_${method}.xpost \
                    results/xpost/NuTildeSensitivity_${method}.xpost \

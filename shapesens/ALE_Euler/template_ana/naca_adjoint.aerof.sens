@@ -12,7 +12,7 @@ under Input {
   Prefix = "";
   GeometryPrefix="";
   ShapeDerivative = "./sdesign/naca_sowered.der";
-  InitialWallDisplacement="./sdesign/naca_sowered.vmo";
+  //InitialWallDisplacement="./sdesign/naca_sowered.vmo";
   Solution = "./rst/naca_steady.sol";
 }
 
@@ -33,7 +33,7 @@ under Output {
     EddyViscositySensitivity = "./results/EddyViscositySensitivity_adjoint";
     VelocityNormSensitivity  = "./results/VelocityNormSensitivity_adjoint";
     VelocitySensitivity      = "./results/VelocitySensitivity_adjoint";
-    DisplacementSensitivity  = "./results/DisplacementSensitivity_adjoint";
+    DisplacementSensitivity  = "./results/MeshdispSensitivity_adjoint";
     ForceSensitivity         = "./results/ForceSensitivity_adjoint";
     Frequency = 0;
   }

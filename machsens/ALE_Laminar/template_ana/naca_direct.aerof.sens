@@ -30,7 +30,7 @@ under Output {
     EddyViscositySensitivity = "./results/EddyViscositySensitivity_direct";
     VelocityNormSensitivity  = "./results/VelocityNormSensitivity_direct";
     VelocitySensitivity      = "./results/VelocitySensitivity_direct";
-    DisplacementSensitivity  = "./results/DisplacementSensitivity_direct";
+    DisplacementSensitivity  = "./results/MeshdispSensitivity_direct";
     ForceSensitivity         = "./results/ForceSensitivity_direct";
   }
 }

@@ -18,9 +18,9 @@ under Output {
     Prefix = "";
     LiftandDrag   = "./results/naca_plus_steady.liftdrag";
     Pressure      = "./results/Pressure_plus";
-    Displacement  = "./results/Displacement_plus";
+    Displacement  = "./results/Meshdisp_plus";
     Density       = "./results/Density_plus";
-    Displacement  = "./results/Displacement_plus";
+    Displacement  = "./results/Meshdisp_plus";
     EddyViscosity = "./results/EddyViscosity_plus";
     Mach          = "./results/Mach_plus";
     NuTilde       = "./results/NuTilde_plus";

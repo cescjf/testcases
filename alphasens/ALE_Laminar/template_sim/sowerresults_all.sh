@@ -4,7 +4,7 @@ SOWER_EXECUTABLE=/home/pavery/bin/sower
 
 
 
-for item in Density Mach Pressure Temperature TotalPressure VelocityNorm Velocity Displacement; do
+for item in Density Mach Pressure Temperature TotalPressure VelocityNorm Velocity Meshdisp; do
 #for item in DensitySensitivity; do
 # Postprocess fluid solution plus
 $SOWER_EXECUTABLE -fluid -merge -con ../mesh/mesh_ref.con -mesh ../mesh/mesh_ref.msh -result ./results/${item}_plus -output ./results/xpost/${item}_plus -precision 15
