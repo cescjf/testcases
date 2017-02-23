@@ -40,7 +40,7 @@ for index_mach in range(1,NUMMACH+1):
 
         #Initializing the plot
         plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+\
-                  " mach="+str(machvalues[index_mach-1])
+                  " mach="+str(machvalues[index_mach-1])+"\n"+time.strftime("%d/%m/%Y")
         f, multiaxes = setup_plots(plottitle,17,6)
 
 

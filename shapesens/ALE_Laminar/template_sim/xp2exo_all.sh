@@ -9,5 +9,6 @@ $XP2EXO_EXECUTABLE ../mesh/naca.top \
                    results/xpost/TemperatureSensitivity.xpost \
                    results/xpost/TotalPressureSensitivity.xpost \
                    results/xpost/VelocityNormSensitivity.xpost \
+                   results/xpost/StateVectorSensitivity.xpost \
                    results/xpost/VelocitySensitivity.xpost \
                    results/xpost/MeshdispSensitivity.xpost

@@ -30,7 +30,7 @@ under Output {
     TemperatureSensitivity   = "./results/TemperatureSensitivity_direct";
     TotalPressureSensitivity = "./results/TotalPressureSensitivity_direct";
     NuTildeSensitivity       = "./results/NuTildeSensitivity_direct";
-    EddyViscositySensitivity = "./results/EddyViscositySensitivity_direct";
+    //EddyViscositySensitivity = "./results/EddyViscositySensitivity_direct";
     VelocityNormSensitivity  = "./results/VelocityNormSensitivity_direct";
     VelocitySensitivity      = "./results/VelocitySensitivity_direct";
     DisplacementSensitivity  = "./results/MeshdispSensitivity_direct";

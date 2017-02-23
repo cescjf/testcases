@@ -15,7 +15,7 @@ from plotlib      import plotLifts, plotIterations, getCSVdata, setup_plots, sav
 os.system("rm -rf ./results/Ma*/*")
 
 MainText("\nREADING INPUT-FILES")
-machvalues, anglevalues, shapevars, perturbvals, NUMMACH, NUMANGLES, NUMPERTURB, NUMSHAPEVARS = ReadInputFiles('scriptinput/')
+machvalues, anglevalues, shapevars, perturbvals, NUMMACH, NUMANGLES, NUMSHAPEVARS, NUMPERTURB = ReadInputFiles('scriptinput/')
 
 
 MainText("\nSTART PlOTTING")
@@ -36,7 +36,7 @@ for index_mach in range(1,NUMMACH+1):
 
 
 
-        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+"\nmach="+str(machvalues[index_mach-1])
+        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+" mach="+str(machvalues[index_mach-1]+"\n"+time.strftime("%d/%m/%Y"))
         f, multiaxes = setup_plots(plottitle,NUMSHAPEVARS,17,14)
 
         for shapevarindex in range(1,NUMSHAPEVARS+1):
