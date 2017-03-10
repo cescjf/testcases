@@ -34,7 +34,7 @@ under Output {
     VelocityNormSensitivity  = "./results/VelocityNormSensitivity_direct";
     VelocitySensitivity      = "./results/VelocitySensitivity_direct";
     DisplacementSensitivity  = "./results/MeshdispSensitivity_direct";
-    ForceSensitivity         = "./results/ForceSensitivity_direct";
+    ForceSensitivity         = "./results/naca_direct_sens.force";
     Frequency = 0;
   }
 }

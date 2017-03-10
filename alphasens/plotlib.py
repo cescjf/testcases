@@ -4,6 +4,7 @@ import numpy as np
 
 
 def plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label):
+    plt.rc('text', usetex=True)
 
     colors=['r','k','g']
     styles=['-o','-','--']
@@ -16,7 +17,7 @@ def plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label):
 
         axes.semilogx(xdata, ydata,s+c, label=l)
         avg=np.average(ydata)
-        axes.text(pos,np.max(ydata)*1.01,'avg;: '+"{:.2E}".format(avg),
+        axes.text(pos,np.max(ydata)*1.01,l+"\navg;: "+"{:.2E}".format(avg),
                   color=c,horizontalalignment=halign)
 
 
@@ -50,14 +51,15 @@ def getCSVdata(file_sim,filedirect,fileadjoint,filedirect_linsolve,fileadjoint_l
         return data_sim, data_direct, data_adjoint, data_direct_linsolve, data_adjoint_linsolve
 
 def setup_plots(plottitle,size_x,size_y):
+        plt.rc('text', usetex=False)
         f, (multiaxes) = plt.subplots(1, 3, sharey=False)
         f.set_size_inches(size_x,size_y)
-        plt.suptitle(plottitle)
+        plt.suptitle(plottitle,usetex=False)
         multiaxes[0].set_xlabel("step-size")
         multiaxes[1].set_xlabel("step-size")
-        multiaxes[2].set_xlabel("# iteration")
-        multiaxes[0].set_title("Sensitivity Lx")
-        multiaxes[1].set_title("Sensitivity Ly")
+        multiaxes[2].set_xlabel("iteration")
+        multiaxes[0].set_title("Sensitivity-x")
+        multiaxes[1].set_title("Sensitivity-y")
         multiaxes[2].set_title("Linear Solver residual")
         return f, (multiaxes)
     

@@ -13,9 +13,6 @@ def extractLifts(filename):
     return Lx, Ly
 
 
-
-
-
 def doFD(Lx_minus,Lx_plus,Ly_minus,Ly_plus,absvar):
     dLx="{:.10e}".format((Lx_plus-Lx_minus)/(absvar*2  ))
     dLy="{:.10e}".format((Ly_plus-Ly_minus)/(absvar*2  ))
