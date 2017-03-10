@@ -4,6 +4,7 @@ import os as os
 #import matplotlib.pyplot as plt
 #import numpy as np
 import sys
+import time
 
 sys.path.append("../")
 from functionlib  import extractLifts, doFD, writeCSVana
@@ -40,7 +41,7 @@ for index_mach in range(1,NUMMACH+1):
 
         #Initializing the plot
         plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+\
-                  " mach="+str(machvalues[index_mach-1])+"\n"+time.strftime("%d/%m/%Y")
+                  " mach="+str(machvalues[index_mach-1])+" "+time.strftime("%d/%m/%Y")
         f, multiaxes = setup_plots(plottitle,17,6)
 
 
@@ -68,16 +69,16 @@ for index_mach in range(1,NUMMACH+1):
         plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label)
 
 
-        ################################################
-        # Plots for linear solver                      #
-        ################################################
-        axes=multiaxes[2]
-        iter_direct =data_direct_linsolve ['iteration']
-        iter_adjoint=data_adjoint_linsolve['iteration']
-        res_direct  =data_direct_linsolve ['residual']
-        res_adjoint =data_adjoint_linsolve['residual']
+        # ################################################
+        # # Plots for linear solver                      #
+        # ################################################
+        # axes=multiaxes[2]
+        # iter_direct =data_direct_linsolve ['iteration']
+        # iter_adjoint=data_adjoint_linsolve['iteration']
+        # res_direct  =data_direct_linsolve ['residual']
+        # res_adjoint =data_adjoint_linsolve['residual']
 
-        plotIterations(axes,iter_direct,res_direct,iter_adjoint,res_adjoint)
+        # plotIterations(axes,iter_direct,res_direct,iter_adjoint,res_adjoint)
 
 
         multiaxes[0].legend(loc='upper center', bbox_to_anchor=(1, -0.20),

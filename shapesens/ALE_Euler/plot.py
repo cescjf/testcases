@@ -38,7 +38,7 @@ for index_mach in range(1,NUMMACH+1):
 
 
 
-        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+" mach="+str(machvalues[index_mach-1]+"\n"+time.strftime("%d/%m/%Y"))
+        plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+" mach="+str(machvalues[index_mach-1]+" "+time.strftime("%d/%m/%Y"))
         f, multiaxes = setup_plots(plottitle,NUMSHAPEVARS,17,14)
 
         for shapevarindex in range(1,NUMSHAPEVARS+1):

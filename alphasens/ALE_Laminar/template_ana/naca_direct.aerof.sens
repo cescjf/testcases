@@ -37,6 +37,8 @@ under Output {
 }
 
 under SensitivityAnalysis {
+  LinSolveRHS = "results/LinSolveRHS_direct";
+  dFdS_final  = "results/dFdS_final_direct";
   Method = Direct;
   SensitivityComputation = Analytical;
   //MatrixVectorProduct = Exact;

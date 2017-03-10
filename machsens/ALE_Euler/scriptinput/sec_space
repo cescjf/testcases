@@ -1,6 +1,6 @@
 under Space  {
   under NavierStokes { 
-    Flux = Roe;
+    Flux = VanLeer;
     Reconstruction = Constant;
     AdvectiveOperator = FiniteVolume;
     Limiter = VanAlbada;

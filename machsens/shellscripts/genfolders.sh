@@ -74,7 +74,7 @@ do
         python2.6 ./scriptinput/replacescript.py file=./sim_${index_mach}_${index_angle}_${index_perturb}/naca_minus.aerof.steady key=${sec} text=./scriptinput/${sec}
       done
       
-      for sec in sec_meshmotion sec_space sec_surfaces sec_bc; do
+      for sec in sec_meshmotion sec_space sec_surfaces sec_bc sec_referencestate; do
         python2.6 ./scriptinput/replacescript.py file=./sim_${index_mach}_${index_angle}_${index_perturb}/naca_plus.aerof.steady key=${sec} text=../scriptinput/${sec}
         python2.6 ./scriptinput/replacescript.py file=./sim_${index_mach}_${index_angle}_${index_perturb}/naca_minus.aerof.steady key=${sec} text=../scriptinput/${sec}
       done

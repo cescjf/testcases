@@ -4,6 +4,7 @@ import os as os
 #import matplotlib.pyplot as plt
 #import numpy as np
 import sys
+import time
 
 sys.path.append("../")
 from functionlib  import extractLifts, doFD, writeCSVana
@@ -40,7 +41,7 @@ for index_mach in range(1,NUMMACH+1):
 
         #Initializing the plot
         plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+\
-                  " mach="+str(machvalues[index_mach-1])+"\n"+time.strftime("%d/%m/%Y")
+                  " mach="+str(machvalues[index_mach-1])+" "+time.strftime("%d/%m/%Y")
         f, multiaxes = setup_plots(plottitle,17,6)
 
 

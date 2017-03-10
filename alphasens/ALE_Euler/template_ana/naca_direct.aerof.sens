@@ -37,10 +37,12 @@ under Output {
 }
 
 under SensitivityAnalysis {
+  LinSolveRHS = "results/LinSolveRHS_direct";
+  dFdS_final  = "results/dFdS_final_direct";
   Method = Direct;
   SensitivityComputation = Analytical;
   //MatrixVectorProduct = Exact;
-  SensitivityAlpha = On;
+  SensitivityBeta = On;
   under LinearSolver {
     Type = Gmres;
     MaxIts = 500;

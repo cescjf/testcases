@@ -39,7 +39,9 @@ under Output {
 }
 
 under SensitivityAnalysis {
-  Method = Direct;
+  LinSolveRHS = "results/LinSolveRHS_adjoint";
+  dFdS_final  = "results/dFdS_final_adjoint";
+  Method = Adjoint;
   SensitivityComputation = Analytical;
   MatrixVectorProduct = Approximate;
   SensitivityMesh = On;

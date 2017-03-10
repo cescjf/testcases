@@ -4,7 +4,7 @@ under BoundaryConditions {
     Mach    = <machnumber>;
     Density = 0.45;
     Pressure = 30397.5;
-    Alpha   = <alpha>;
-    Beta    = 0.0;
+    Alpha   = 0.0;
+    Beta    = <alpha>;
   }
 }

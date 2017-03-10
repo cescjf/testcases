@@ -2,6 +2,10 @@
 XP2EXO_EXECUTABLE=/home/pavery/bin/xp2exo
 
 for method in direct; do
+sed -i 's/Vector /Vector5 /g' results/xpost/StateVectorSensitivity_${method}.xpost
+
+sed -i 's/Vector /Vector5 /g' results/xpost/dFdS_final_${method}.xpost
+sed -i 's/Vector /Vector5 /g' results/xpost/LinSolveRHS_${method}.xpost
 $XP2EXO_EXECUTABLE ../mesh/naca.top \
                    ./results/exo/all_quantities_${method}.exo \
                    results/xpost/DensitySensitivity_${method}.xpost \
@@ -14,6 +18,8 @@ $XP2EXO_EXECUTABLE ../mesh/naca.top \
                    results/xpost/TotalPressureSensitivity_${method}.xpost \
                    results/xpost/VelocityNormSensitivity_${method}.xpost \
                    results/xpost/VelocitySensitivity_${method}.xpost \
+                   results/xpost/LinSolveRHS_${method}.xpost \
+                   results/xpost/dFdS_final_${method}.xpost \
                    results/SteadySolution.xpost
 done
 

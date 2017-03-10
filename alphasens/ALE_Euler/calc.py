@@ -5,7 +5,7 @@ import sys
 
 sys.path.append("../")
 
-os.system("rm -rf ./results/*")
+# os.system("rm -rf ./results/*")
 
 from functionlib import extractLifts, doFD, writeCSVana
 from functionlib2 import MainText, ReadInfo, ReadInputFiles

@@ -4,6 +4,7 @@ import os as os
 #import matplotlib.pyplot as plt
 #import numpy as np
 import sys
+import time
 
 sys.path.append("../")
 from functionlib  import extractLifts, doFD, writeCSVana
@@ -11,7 +12,7 @@ from functionlib2 import MainText, ReadInfo, ReadInputFiles
 from plotlib      import plotLifts, plotIterations, getCSVdata, setup_plots, save_plot
 
 
-os.system("rm -rf ./results/Ma*/*")
+# os.system("rm -rf ./results/Ma*/*")
 
 MainText("\nREADING INPUT-FILES")
 machvalues, anglevalues, perturbvals, NUMMACH, NUMANGLES, NUMPERTURB = ReadInputFiles('scriptinput/')
@@ -40,7 +41,7 @@ for index_mach in range(1,NUMMACH+1):
 
         #Initializing the plot
         plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+\
-                  " mach="+str(machvalues[index_mach-1])+"\n"+time.strftime("%d/%m/%Y")
+                  " mach="+str(machvalues[index_mach-1])+" "+time.strftime("%d/%m/%Y")
         f, multiaxes = setup_plots(plottitle,17,6)
 
 
@@ -68,6 +69,11 @@ for index_mach in range(1,NUMMACH+1):
         plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label)
 
 
+        axes.legend(loc='lower center',mode="expand", borderaxespad=0., 
+                     bbox_to_anchor=(0.,-0.13, 1.,-0.13),
+                    fancybox=True, shadow=True, ncol=5)
+
+
         ################################################
         # Plots for linear solver                      #
         ################################################
@@ -80,8 +86,8 @@ for index_mach in range(1,NUMMACH+1):
         plotIterations(axes,iter_direct,res_direct,iter_adjoint,res_adjoint)
 
 
-        multiaxes[0].legend(loc='upper center', bbox_to_anchor=(1, -0.20),
-                                fancybox=True, shadow=True, ncol=5)
+        # axes.legend(loc='upper center', bbox_to_anchor=(1, -0.20),
+                                # fancybox=True, shadow=True, ncol=5)
 
         save_plot(plotfile)
         

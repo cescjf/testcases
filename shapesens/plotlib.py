@@ -4,9 +4,19 @@ import numpy as np
 
 
 def plotLifts(axes,xdata,ydata_num,ydata_direct,ydata_adjoint,label):
-    axes.semilogx(xdata, ydata_num,    '-o', color='r', label='numerical result')
-    axes.semilogx(xdata, ydata_direct, '-',  color='k', label='direct method')
-    axes.semilogx(xdata, ydata_adjoint,'--', color='g', label='adjoint method')
+    colors=['r','k','g']
+    styles=['-o','-','--']
+    labels=['FD','direct','adjoint']
+    haligns=['center','left','right']
+    poss=[np.average(xdata),np.min(xdata),np.max(xdata)]
+    ydatas=[ydata_num,ydata_direct,ydata_adjoint]
+
+    for c,s,l,halign,pos,ydata in zip(colors,styles,labels,haligns,poss,ydatas):
+        axes.semilogx(xdata, ydata,s+c, label=l)
+        avg=np.average(ydata)
+        axes.text(pos,np.max(ydata)*1.01,'avg;: '+"{:.2E}".format(avg),
+        color=c,horizontalalignment=halign)
+
     axes.semilogx(xdata, ydata_num*0,  '-.', color='b', linewidth=4)
     axes.set_ylabel(label)
     return;
