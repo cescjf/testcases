@@ -54,7 +54,7 @@ def setup_plots(plottitle,size_x,size_y):
         plt.rc('text', usetex=False)
         f, (multiaxes) = plt.subplots(1, 3, sharey=False)
         f.set_size_inches(size_x,size_y)
-        plt.suptitle(plottitle,usetex=False)
+        # plt.suptitle(plottitle,usetex=False)
         multiaxes[0].set_xlabel("step-size")
         multiaxes[1].set_xlabel("step-size")
         multiaxes[2].set_xlabel("iteration")

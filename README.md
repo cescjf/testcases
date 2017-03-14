@@ -116,13 +116,13 @@ The following table summarizes the Verification of results.
     <td class="tg-e3zv" rowspan="2">ALE</td>
     <td class="tg-031e">Direct</td>
     <td class="tg-031e"> <a href="shapesens/ALE_Euler/results">✓</a> </td>                 <!-- ALE-Direct-Euler-s -->
-    <td class="tg-031e"> <a href="alphasens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Direct-Euler-α -->
+    <td class="tg-031e"> <a href="alphasens/ALE_Euler/results">✓</a> </td>                 <!-- ALE-Direct-Euler-α -->
     <td class="tg-031e"> <a href="machsens/ALE_Euler/results">!</a> </td>                 <!-- ALE-Direct-Euler-Ma -->
     <td class="tg-yw4l"> <a href="shapesens/ALE_Laminar/results">✓</a> </td>                 <!-- ALE-Direct-Laminar-s -->
-    <td class="tg-yw4l"> <a href="alphasens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Direct-Laminar-α -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_Laminar/results">✓</a> </td>                 <!-- ALE-Direct-Laminar-α -->
     <td class="tg-yw4l"> <a href="machsens/ALE_Laminar/results">!</a> </td>                 <!-- ALE-Direct-Laminar-Ma -->
     <td class="tg-yw4l"> <a href="shapesens/ALE_RANS/results">✓</a> </td>                 <!-- ALE-Direct-RANS-s -->
-    <td class="tg-yw4l"> <a href="alphasens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Direct-RANS-α -->
+    <td class="tg-yw4l"> <a href="alphasens/ALE_RANS/results">✓</a> </td>                 <!-- ALE-Direct-RANS-α -->
     <td class="tg-yw4l"> <a href="machsens/ALE_RANS/results">!</a> </td>                 <!-- ALE-Direct-RANS-Ma -->
   </tr>
   <tr>

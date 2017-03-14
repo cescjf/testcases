@@ -28,7 +28,7 @@ under Output {
     TotalPressure = "./results/TotalPressure_minus";
     VelocityNorm  = "./results/VelocityNorm_minus";
     Velocity      = "./results/Velocity_minus";
-    Force         = "./results/Force_minus";
+    Force         = "./results/naca_minus_steady.force";
     Frequency = 0;
   }
   under Restart {
