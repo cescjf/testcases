@@ -15,6 +15,10 @@ def extractLifts(filename,type):
 
     return Lx, Ly
 
+def extractFinalValue(filename,colname):
+    t=pd.read_csv(filename)
+    tlen=len(t)-1
+    return t[colname][tlen]
 
 def doFD(Lx_minus,Lx_plus,Ly_minus,Ly_plus,absvar):
     dLx="{:.10e}".format((Lx_plus-Lx_minus)/(absvar*2  ))
