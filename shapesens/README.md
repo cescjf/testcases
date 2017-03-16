@@ -2,6 +2,10 @@
 
 This repository provides automated test cases for the validation of sensitivity analysis in AERO-F
 
+## Setup
+We are using a design element concept based on the following design nodes.
+![aaa](../doc/sdesign.png)
+
 ## Structure
 The repository consists of 3 main folders
  * euler_bodyfitted
