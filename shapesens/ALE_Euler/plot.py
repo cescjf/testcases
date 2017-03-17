@@ -23,21 +23,18 @@ print(NUMSHAPEVARS)
 MainText("\nSTART PlOTTING")
 for type in ['force','liftdrag']:
     for index_mach in range(1,NUMMACH+1):
+        #check if an appropriate outputfolder exist; if not, create it
+        if  not os.path.exists("./results/Ma"+str(machvalues[index_mach-1])):
+          os.makedirs("./results/Ma"+str(machvalues[index_mach-1]))
+        readmefile=open('./results/Ma'+str(machvalues[index_mach-1])+'/README.md','w')
         for index_angle in range(1,NUMANGLES+1):
             plotfile='./results/Ma'+str(machvalues[index_mach-1])+'/'+type+'_angle'+str(anglevalues[index_angle-1])+".png"
             print("Writing file"+plotfile)
 
-            #check if an appropriate outputfolder exist; if not, create it
-            if  not os.path.exists("./results/Ma"+str(machvalues[index_mach-1])):
-              os.makedirs("./results/Ma"+str(machvalues[index_mach-1]))
 
             #create filenames of analytic simulations resuts from the manual on
             filedirect           = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_direct_'+type+'.csv'
             fileadjoint          = 'anasim_'+str(index_mach)+'_'+str(index_angle)+'_adjoint_'+type+'.csv'
-            
-
-
-
 
             plottitle=os.getcwd().split('/')[-1]+"  angle="+str(anglevalues[index_angle-1])+" mach="+str(machvalues[index_mach-1]+" "+time.strftime("%d/%m/%Y"))
             f, multiaxes = setup_plots(plottitle,NUMSHAPEVARS,17,14)
@@ -91,5 +88,8 @@ for type in ['force','liftdrag']:
                                     fancybox=True, shadow=True, ncol=5)
 
             save_plot(plotfile)
+            readmefile.write('#'+type+'results for  Ma: '+machvalues[index_mach-1]+' angle: '+anglevalues[index_angle-1]+'\n')
+            readmefile.write('!['+plotfile.split('/')[-1]+']'+'('+plotfile.split('/')[-1]+')\n')
+        readmefile.close()
 
 MainText("")
