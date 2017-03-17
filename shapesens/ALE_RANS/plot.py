@@ -26,7 +26,7 @@ for type in ['force','liftdrag']:
         #check if an appropriate outputfolder exist; if not, create it
         if  not os.path.exists("./results/Ma"+str(machvalues[index_mach-1])):
           os.makedirs("./results/Ma"+str(machvalues[index_mach-1]))
-        readmefile=open('./results/Ma'+str(machvalues[index_mach-1])+'/README.md','w')
+        readmefile=open('./results/Ma'+str(machvalues[index_mach-1])+'/README.md','a+')
         for index_angle in range(1,NUMANGLES+1):
             plotfile='./results/Ma'+str(machvalues[index_mach-1])+'/'+type+'_angle'+str(anglevalues[index_angle-1])+".png"
             print("Writing file"+plotfile)
